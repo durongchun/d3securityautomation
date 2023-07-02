@@ -105,10 +105,11 @@ public class BaseBrowser {
     public WebElement clickElement(By locator) {
         WebElement buttonElement = locateElement(locator);
         wait.until(ExpectedConditions.elementToBeClickable(locator));
+        highlightElement(driver, buttonElement);
         buttonElement.click();
         return buttonElement;
-    }
-
+    }    
+ 
     /**
      * Input box
      *
@@ -117,6 +118,7 @@ public class BaseBrowser {
      */
     public WebElement sendInput(By locator, CharSequence... content) {
         WebElement inputElement = locateElement(locator);
+        highlightElement(driver, locator);
         inputElement.clear();
         inputElement.sendKeys(content);
         return inputElement;
@@ -309,6 +311,14 @@ public class BaseBrowser {
     private Object executeScriptOb(final String command) {
         return js.executeScript(command);
     }
+    
+    /**
+     * Javascript click element
+     */ 
+    public void clickElementWithJavaScript(WebDriver driver, WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
+    }
 
     /**
      * Scroll to top of page
@@ -363,7 +373,7 @@ public class BaseBrowser {
      *
      * @param element
      */
-    public void mouseOverToElement(WebElement element) {
+    public void mouseOverToElement(WebElement element) { 		
         String mouseOverScript = "if(document.createEvent){var evObj = document.createEvent('MouseEvents');evObj.initEvent('mouseover', true, false); "
                 + "arguments[0].dispatchEvent(evObj);} else if(document.createEventObject) { arguments[0].fireEvent('onmouseover');}";
         executeScript(mouseOverScript, element);
@@ -446,6 +456,7 @@ public class BaseBrowser {
      * @param element a web element to invoke {@code click} on
      */
     public void click(WebElement element) {
+    	highlightElement(driver, element);
         executeScript("arguments[0].click()", element);
     }
 
@@ -479,6 +490,18 @@ public class BaseBrowser {
     }
     
     /**
+     * Force wait     
+     * @param seconds
+     */
+    public void waitForSeconds(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000); // 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    /**
      * Set Value of an Input Field using Javascript. 
      * Takes input of css Selector of the element and the value to be set in the input field
      * @param cssSelector
@@ -494,10 +517,54 @@ public class BaseBrowser {
     public boolean isElementExists(WebDriver driver, By locator) {
         try {            
             driver.findElement(locator);
+            highlightElement(driver, locator);
             return true; 
         } catch (NoSuchElementException e) {
             return false; 
         }
+    }
+    
+    /**
+     * Highlight function to apply a yellow background color to the element     * 
+     * @param driver
+     * @param element
+     */
+    public void highlightElement(WebDriver driver, WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String originalStyle = element.getAttribute("style");
+        js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+        
+        // Wait for a brief moment to see the highlighted element
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        // Reset the element's original style
+        js.executeScript("arguments[0].setAttribute('style', '" + originalStyle + "');", element);
+    }
+    
+    /**
+     * Highlight function to apply a yellow background color to the locator
+     * @param driver
+     * @param element* 
+     */
+    public void highlightElement(WebDriver driver, By locator) {
+        WebElement element = driver.findElement(locator);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String originalStyle = element.getAttribute("style");
+        js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+        
+        // Wait for a brief moment to see the highlighted element
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        // Reset the element's original style
+        js.executeScript("arguments[0].setAttribute('style', '" + originalStyle + "');", element);
     }
 
 }

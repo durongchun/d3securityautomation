@@ -1,5 +1,7 @@
 package com.d3security.pageobject.page;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 
 import com.d3security.basepage.BasePage;
@@ -76,7 +78,9 @@ public class LoginPage extends BasePage {
 
 	public void LaunchVSOCManually() {
 		this.clickElement(PhysicSystemLocator.LaunchVSOC);
-		this.waitForJQueryToLoad();
+		driver.navigate().refresh();
+		this.waitForSeconds(8);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 }

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [ERP System ]" parallel="tests">
-  <test thread-count="3" name="Road Test(failed)" parallel="tests">
-    <parameter name="browserName" value="firefox"/>
-    <parameter name="nodeIp" value="http://192.168.1.80:5555"/>
+<suite configfailurepolicy="continue" thread-count="3" parallel="tests" name="Failed suite [Physic System ]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="test3(failed)">
+    <parameter name="browserName" value="chrome"/>
     <classes>
-      <class name="com.holinova.testcase.TestRoadLangley">
+      <class name="com.d3security.testcase.PhysicSystemTest">
         <methods>
+          <include name="testPhysicFlow" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
           <include name="afterSuite"/>
-          <include name="testRoadRegister" invocation-numbers="0"/>
-          <include name="beforeSuite"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="afterClass"/>
         </methods>
-      </class> <!-- com.holinova.testcase.TestRoadLangley -->
+      </class> <!-- com.d3security.testcase.PhysicSystemTest -->
     </classes>
-  </test> <!-- Road Test(failed) -->
-</suite> <!-- Failed suite [ERP System ] -->
+  </test> <!-- test3(failed) -->
+</suite> <!-- Failed suite [Physic System ] -->

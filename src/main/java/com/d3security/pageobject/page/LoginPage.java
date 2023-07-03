@@ -65,21 +65,21 @@ public class LoginPage extends BasePage {
     }
 
 	public void signInPhysic(PhysicSystemData physicSystemData) {
-		this.sendInput(PhysicSystemLocator.UserName, physicSystemData.getUserName());
-		this.sendInput(PhysicSystemLocator.PassWord, physicSystemData.getPassWord());
-		this.clickElement(PhysicSystemLocator.SubmitButt);
+		sendInput(PhysicSystemLocator.UserName, physicSystemData.getUserName());
+		sendInput(PhysicSystemLocator.PassWord, physicSystemData.getPassWord());
+		clickElement(PhysicSystemLocator.SubmitButt);
 	}
 
 	public void signInCyber(CyberSystemData cyberSystemData) {
-		this.sendInput(PhysicSystemLocator.UserName, cyberSystemData.getUserName());
-		this.sendInput(PhysicSystemLocator.PassWord, cyberSystemData.getPassWord());
-		this.clickElement(PhysicSystemLocator.SubmitButt);
+		sendInput(PhysicSystemLocator.UserName, cyberSystemData.getUserName());
+		sendInput(PhysicSystemLocator.PassWord, cyberSystemData.getPassWord());
+		clickElement(PhysicSystemLocator.SubmitButt);
 	}
 
 	public void LaunchVSOCManually() {
-		this.clickElement(PhysicSystemLocator.LaunchVSOC);
+		clickElement(PhysicSystemLocator.LaunchVSOC);
 		driver.navigate().refresh();
-		this.waitForSeconds(8);
+		waitForSeconds(8);
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}

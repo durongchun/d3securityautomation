@@ -148,17 +148,17 @@ public class BaseBrowser {
 		actions.dragAndDrop(locateElement(fromLocator), locateElement(toLocator)).perform();
 	}
 
-	public void selectDropdownByValue(By locator, String value) {
+	public void selectDropdownByVisibleText(By locator, String value) {
 		// Locate the dropdown element
 		WebElement dropdownElement = driver.findElement(locator);
 		// Create a Select object
 		Select dropdown = new Select(dropdownElement);	
 		// Select an option by value
-		dropdown.selectByValue(value);
-		// Select an option by index
+		dropdown.selectByVisibleText(value);		
 		// dropdown.selectByIndex(2);
-		// Select an option by visible text
-		// dropdown.selectByVisibleText("Option 1");
+		//dropdown.selectByValue();
+		
+		
 	}
 
 	/**

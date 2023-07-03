@@ -13,7 +13,7 @@ public class TestConstant {
     /**
      * int 3000
      */
-    public static final int THREE_THOUSANG = 3000;
+    public static final int THREE_THOUSANG = 6000;
 
     /**
      * int 10000

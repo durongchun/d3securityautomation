@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-02T15:59:37 PDT" name="Default suite" finished-at="2023-07-02T16:00:12 PDT" duration-ms="34784">
+  <suite started-at="2023-07-02T23:04:25 PDT" name="Default suite" finished-at="2023-07-02T23:05:26 PDT" duration-ms="61074">
     <groups>
     </groups>
-    <test started-at="2023-07-02T15:59:37 PDT" name="Default test" finished-at="2023-07-02T16:00:12 PDT" duration-ms="34784">
+    <test started-at="2023-07-02T23:04:25 PDT" name="Default test" finished-at="2023-07-02T23:05:26 PDT" duration-ms="61074">
       <class name="com.d3security.testcase.PhysicSystemTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T15:59:37 PDT" name="beforeSuite" finished-at="2023-07-02T15:59:37 PDT" duration-ms="47" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T23:04:25 PDT" name="beforeSuite" finished-at="2023-07-02T23:04:25 PDT" duration-ms="51" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T15:59:37 PDT" name="beforeTest" finished-at="2023-07-02T15:59:38 PDT" duration-ms="1586" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T23:04:25 PDT" name="beforeTest" finished-at="2023-07-02T23:04:26 PDT" duration-ms="1822" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,30 +50,100 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T15:59:38 PDT" name="beforeClass" finished-at="2023-07-02T15:59:38 PDT" duration-ms="19" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T23:04:26 PDT" name="beforeClass" finished-at="2023-07-02T23:04:26 PDT" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="testPhysicFlow([Ljava.lang.Object;)[pri:1, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T15:59:39 PDT" name="testPhysicFlow" description="Physic Login" data-provider="PhysicData" finished-at="2023-07-02T16:00:08 PDT" duration-ms="28608" status="PASS">
+        <test-method signature="testPhysicFlow([Ljava.lang.Object;)[pri:1, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T23:04:27 PDT" name="testPhysicFlow" description="Physic Login" data-provider="PhysicData" finished-at="2023-07-02T23:05:22 PDT" duration-ms="54904" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6a567f7b]]>
+                <![CDATA[[Ljava.lang.Object;@6870cfac]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of element located by: By.cssSelector: div.de-section > div.de-section-item.de-section-item-selected:nth-child(9) (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.cssSelector: div.de-section > div.de-section-item.de-section-item-selected:nth-child(9) (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.d3security.basepage.BaseBrowser.locateElement(BaseBrowser.java:100)
+at com.d3security.basepage.BaseBrowser.clickElement(BaseBrowser.java:110)
+at com.d3security.pageobject.page.physicsystem.AddIncidentReportPage.clickArrestDetails(AddIncidentReportPage.java:18)
+at com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div.de-section > div.de-section-item.de-section-item-selected:nth-child(9)"}
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LDU-HOME-1', ip: '192.168.1.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55255}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 59de3f0f5fda14027c39b92b8f6eff7c
+*** Element info: {Using=css selector, value=div.de-section > div.de-section-item.de-section-item-selected:nth-child(9)}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPhysicFlow -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T16:00:08 PDT" name="afterClass" finished-at="2023-07-02T16:00:08 PDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T23:05:22 PDT" name="afterClass" finished-at="2023-07-02T23:05:22 PDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T16:00:08 PDT" name="afterTest" finished-at="2023-07-02T16:00:12 PDT" duration-ms="3719" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T23:05:22 PDT" name="afterTest" finished-at="2023-07-02T23:05:26 PDT" duration-ms="3589" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T16:00:12 PDT" name="afterSuite" finished-at="2023-07-02T16:00:12 PDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@667e34b1]" started-at="2023-07-02T23:05:26 PDT" name="afterSuite" finished-at="2023-07-02T23:05:26 PDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

@@ -17,6 +17,7 @@ public class IncidentReportsPage extends BasePage {
 	}
 
 	public void goD3vSOCWindow() {
+		logger.info("Go D3vSOC Window");
 		driver.close();
 		Set<String> allHandlesSet = driver.getWindowHandles();
 		for (String handle : allHandlesSet) {
@@ -29,6 +30,7 @@ public class IncidentReportsPage extends BasePage {
 	}
 
 	public void searchIR(String input) {
+		logger.info("Search IR");
 		sendInput(PhysicSystemLocator.SearchInput, input);
 		driver.findElement(PhysicSystemLocator.SearchInput).sendKeys(Keys.ENTER);
 	}

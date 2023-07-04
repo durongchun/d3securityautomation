@@ -16,6 +16,7 @@ public class HeaderPage extends BasePage {
 	}
 
 	public void clickHamburgerMenu() {	
+		logger.info("Click Hamburger Menu");
 		waitForSeconds(1);	
 		switchFrame(PhysicSystemLocator.IframeID);
 		mouseOverToElement(driver.findElement(PhysicSystemLocator.HamburgerMenu));		
@@ -23,17 +24,20 @@ public class HeaderPage extends BasePage {
 	}
 
 	public void clickIncidentReportsMenu() {
+		logger.info("Click IncidentReports Menu");
 		waitForSeconds(1);	
 		clickElementWithJavaScript(driver,driver.findElement(PhysicSystemLocator.IncidentReportsMenu));
 	}
 
 	public void clickAddNewIcon() {		
+		logger.info("Click Add New Icon");
 		waitForSeconds(5);		
 		mouseOverToElement(driver.findElement(PhysicSystemLocator.CreateIcon));
 		waitForSeconds(1);
 	}
 
 	public void selectOptionFromAddNewDropdown(String str) {
+		logger.info("Select dropdown " + str);
 		List<WebElement> elements = driver.findElements(PhysicSystemLocator.AddNewDropdownOptions);		
 		for (WebElement ele : elements) {
 			if (ele.getText().equals(str)) {

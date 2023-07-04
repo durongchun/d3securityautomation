@@ -69,6 +69,8 @@ public class LoginPage extends BasePage {
 		sendInput(PhysicSystemLocator.UserName, physicSystemData.getUserName());
 		sendInput(PhysicSystemLocator.PassWord, physicSystemData.getPassWord());
 		clickElement(PhysicSystemLocator.SubmitButt);
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
 	}
 
 	public void signInCyber(CyberSystemData cyberSystemData) {
@@ -78,6 +80,7 @@ public class LoginPage extends BasePage {
 	}
 
 	public void LaunchVSOCManually() {
+		log.info("Launch VSOC Manually");
 		clickElement(PhysicSystemLocator.LaunchVSOC);
 		driver.navigate().refresh();
 		waitForSeconds(8);

@@ -16,6 +16,7 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public void clickArrestDetails() {
+		logger.info("Click Arrest Details");
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 		waitForSeconds(1);
@@ -24,12 +25,14 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public void clickWorkplaceViolence() {
+		logger.info("Click Workplace Violence");
 		driver.switchTo().defaultContent();
 		clickElement(PhysicSystemLocator.WorkplaceViolence);
 		waitForSeconds(1);
 	}
 
 	public void clickSave() {
+		logger.info("Save");
 		driver.switchTo().defaultContent();
 		clickElement(PhysicSystemLocator.SaveButt);
 		waitForJQueryToLoad();
@@ -37,18 +40,21 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public void clickNoOptionFromArrestDetails() {
+		logger.info("Choose No");
 		waitForSeconds(2);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
 		clickElement(PhysicSystemLocator.NoCheckboxForArrestDetails);
 	}
 
 	public void selectOptionFromWorkplaceViolence(String value) {
+		logger.info("Choose " + value);
 		waitForSeconds(2);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
 		selectDropdownByVisibleText(PhysicSystemLocator.WorkplaceViolenceOption, value);
 	}
 
 	public boolean newIncidentReportExistingAndDisplayed() {
+		logger.info("Add IncidentReport Window is opening");
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 		waitForSeconds(5);
@@ -73,6 +79,7 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public String getIncidentReportNumber() {
+		logger.info("Get IncidentReport number: " + driver.findElement(PhysicSystemLocator.IncidentNumber).getText());
 		return driver.findElement(PhysicSystemLocator.IncidentNumber).getText();
 	}
 

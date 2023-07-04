@@ -39,18 +39,6 @@
 			</class> 
     	</classes>  
 	</test>
-	
-	<test name="test4">  
-   		<parameter name="browserName" value="chrome"/>      	
-   	 	<classes>  
-        	<class name="com.d3security.testcase.CyberSystemTest"> 
-        	<methods>
-					<include name="testCyberFlow" />
-				</methods>
-			</class> 
-    	</classes>  
-	</test>
-
 
 <!-- <test name="Road Test">  
    		<parameter name="browserName" value="firefox" />		

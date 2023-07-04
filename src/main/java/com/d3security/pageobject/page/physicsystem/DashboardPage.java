@@ -19,6 +19,7 @@ public class DashboardPage extends BasePage {
 		this.switchSecondWindow();
 		this.switchFrame(PhysicSystemLocator.IframeID);
 		// driver.switchTo().frame("FrameOnLifeServer");
+		logger.info("Dashboard is displaying");
 		return this.isElementExists(driver, PhysicSystemLocator.Dashboard);
 
 	}

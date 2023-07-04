@@ -80,11 +80,25 @@ public class LoginPage extends BasePage {
 	}
 
 	public void LaunchVSOCManually() {
-		log.info("Launch VSOC Manually");
-		clickElement(PhysicSystemLocator.LaunchVSOC);
-		driver.navigate().refresh();
-		waitForSeconds(8);
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		if (isElementExists(driver, PhysicSystemLocator.LaunchVSOC)) {
+			log.info("Launch VSOC Manually");
+			clickElement(PhysicSystemLocator.LaunchVSOC);		
+			driver.navigate().refresh();		
+			waitForSeconds(8);
+			waitForJQueryToLoad();
+			waitForPageToRefresh();
+//			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		}
+		
 
+	}
+	
+	public boolean isLaunchVSOCDisplaying() {
+		if (isElementExists(driver, PhysicSystemLocator.LaunchVSOC)) {
+			return true;
+		}else {
+			return false;
+		}
+		
 	}
 }

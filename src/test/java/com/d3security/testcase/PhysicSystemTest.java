@@ -30,9 +30,9 @@ public class PhysicSystemTest extends BaseTest {
 		new SiteConfiguration(driver).enterPage(physicSystemLocator.url);
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.signInPhysic(physicSystemData);
-		loginPage.LaunchVSOCManually();
-
+		loginPage.signInPhysic(physicSystemData);	
+//		loginPage.LaunchVSOCManually();
+		
 		DashboardPage dashboard = new DashboardPage(driver);
 		dashboard.isDashboardExistingAndDisplayed();
 		

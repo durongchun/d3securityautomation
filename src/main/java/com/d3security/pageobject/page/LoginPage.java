@@ -65,6 +65,7 @@ public class LoginPage extends BasePage {
     }
 
 	public void signInPhysic(PhysicSystemData physicSystemData) {
+		log.info("Sign in");
 		sendInput(PhysicSystemLocator.UserName, physicSystemData.getUserName());
 		sendInput(PhysicSystemLocator.PassWord, physicSystemData.getPassWord());
 		clickElement(PhysicSystemLocator.SubmitButt);

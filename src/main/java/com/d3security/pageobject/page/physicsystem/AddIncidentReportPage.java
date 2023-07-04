@@ -68,7 +68,7 @@ public class AddIncidentReportPage extends BasePage {
 		waitForPageToRefresh();
 		waitForSeconds(6);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
-		waitForSeconds(5);
+		waitForSeconds(6);
 		return isElementExists(driver, PhysicSystemLocator.IncidentNumber);
 	}
 

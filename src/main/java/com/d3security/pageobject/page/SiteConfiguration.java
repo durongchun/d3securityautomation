@@ -14,7 +14,7 @@ public class SiteConfiguration extends BasePage {
 	}
 
 	public void enterPage(String url) {
-		log.info("Go to Cyber System Login page");
+		log.info("Go to Physic System Login page");
 		super.enterPage(url);
 	}
 	

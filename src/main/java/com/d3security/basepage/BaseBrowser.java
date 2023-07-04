@@ -334,6 +334,7 @@ public class BaseBrowser {
 	 * Javascript click element
 	 */
 	public void clickElementWithJavaScript(WebDriver driver, WebElement element) {
+		highlightElement(driver, element);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", element);
 	}
@@ -550,7 +551,7 @@ public class BaseBrowser {
 	public void highlightElement(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		String originalStyle = element.getAttribute("style");
-		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 3px solid red;');", element);
 
 		// Wait for a brief moment to see the highlighted element
 		try {

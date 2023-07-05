@@ -52,5 +52,12 @@ public class PhysicSystemLocator {
 	public static final  String IRShowInGrid = "//td[contains(text(),'%s')]/.."; 
 	public static final By IframeForEntity = By.id("//iframe[contains(@src,'ConcurStatus')]");
 	
+	//----Case Management---	
+	public static final By OwnerSite = By.xpath("//div[contains(text(), 'Owner Site')]/..//div[@class='field-input']/span");
+	public static final By CreateButt = By.id("create_case");
+	public static final By CaseNumber = By.xpath("//td[contains(text(),'Case Number')]/..//td[@class='txt'][1]");
+	public static final By CaseSearchBox = By.cssSelector(".searchbox-text");
+	
+	
 	
 }

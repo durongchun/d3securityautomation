@@ -10,6 +10,7 @@ import com.alibaba.excel.read.listener.PageReadListener;
 import com.alibaba.fastjson.JSON;
 import com.d3security.constant.TestConstant;
 import com.d3security.pageobject.data.CyberSystemData;
+import com.d3security.pageobject.data.PhysicAddCaseData;
 import com.d3security.pageobject.data.PhysicSystemData;
 
 import lombok.extern.slf4j.Slf4j;
@@ -69,6 +70,19 @@ public class EasyExcelUtil {
             }
 			
 		})).sheet("testPhysic").doRead();
+		return excelList;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public static List readPhysicCaseDataExcel() {		
+		List excelList = new ArrayList<>(); 
+		EasyExcel.read(TestConstant.FILEPATH, PhysicAddCaseData.class, new PageReadListener<PhysicAddCaseData>(dataList -> {
+			for (PhysicAddCaseData demoData : dataList) {
+                log.info("read a record{}", JSON.toJSONString(demoData));
+                excelList.add(demoData);
+            }
+			
+		})).sheet("testPhysicAddCase").doRead();
 		return excelList;
 	}
 

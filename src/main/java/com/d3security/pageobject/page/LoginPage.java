@@ -64,10 +64,10 @@ public class LoginPage extends BasePage {
         // todo : login by cookie/sessionid/access_token 
     }
 
-	public void signInPhysic(PhysicSystemData physicSystemData) {
+	public void signInPhysic(String userName, String passWord) {
 		log.info("Sign in");
-		sendInput(PhysicSystemLocator.UserName, physicSystemData.getUserName());
-		sendInput(PhysicSystemLocator.PassWord, physicSystemData.getPassWord());
+		sendInput(PhysicSystemLocator.UserName, userName);
+		sendInput(PhysicSystemLocator.PassWord, passWord);
 		clickElement(PhysicSystemLocator.SubmitButt);
 		waitForJQueryToLoad();
 		waitForPageToRefresh();

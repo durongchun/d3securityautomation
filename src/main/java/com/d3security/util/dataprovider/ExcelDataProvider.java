@@ -39,4 +39,18 @@ public class ExcelDataProvider {
 		}
 		return Data;
 	}
+	
+	@DataProvider(name = "PhysicCaseData")
+	public static Object[][] ReadPhysicCase() throws IOException {
+		List dataList = EasyExcelUtil.readPhysicCaseDataExcel();
+		// count my number of Rows
+		int RowNum = dataList.size();
+		int ColNum = 1;
+		// pass my count data in array
+		Object Data[][] = new Object[RowNum][ColNum];
+		for (int i = 0; i < dataList.size(); i++) {
+			Data[i][0] = dataList.get(i);
+		}
+		return Data;
+	}
 }

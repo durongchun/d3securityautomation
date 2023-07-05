@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import com.alibaba.excel.util.Validate;
 import com.d3security.basetest.BaseTest;
 import com.d3security.basepage.*;
+import com.d3security.pageobject.data.PhysicAddCaseData;
 import com.d3security.pageobject.data.PhysicSystemData;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
 import com.d3security.pageobject.page.LoginPage;
@@ -30,7 +31,7 @@ public class PhysicSystemTest extends BaseTest {
 		new SiteConfiguration(driver).enterPage(physicSystemLocator.url);
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.signInPhysic(physicSystemData);	
+		loginPage.signInPhysic(physicSystemData.getUserName(), physicSystemData.getPassWord());	
 		//loginPage.LaunchVSOCManually();
 		
 		DashboardPage dashboard = new DashboardPage(driver);
@@ -64,5 +65,35 @@ public class PhysicSystemTest extends BaseTest {
  
 		driver.manage().deleteAllCookies();
 	}
+	
+	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicCaseData", description = "Physic Add Case", priority = 1)
+	public void testPhysicAddCase(Object[] dataObject) {
+		PhysicAddCaseData physicAddCaseData = new PhysicAddCaseData();
+		physicAddCaseData = (PhysicAddCaseData) dataObject[0];
+		
+		BaseBrowser baseBroser = new BaseBrowser(driver);
+		PhysicSystemLocator physicSystemLocator = new PhysicSystemLocator();
+		new SiteConfiguration(driver).enterPage(physicSystemLocator.url);
+
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.signInPhysic(physicAddCaseData.getUserName(), physicAddCaseData.getPassWord());	
+		//loginPage.LaunchVSOCManually();
+		
+		DashboardPage dashboard = new DashboardPage(driver);
+		dashboard.isDashboardExistingAndDisplayed();
+		
+		HeaderPage header = new HeaderPage(driver);	
+		header.clickAddNewIcon();
+		header.selectOptionFromAddNewDropdown(physicAddCaseData.getDropDownOption());
+		
+		//Create a new case
+		
+		
+		
+		driver.manage().deleteAllCookies();
+	}
+	
+	
+
 
 }

@@ -2,7 +2,7 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Cyber System " verbose="1" parallel="tests" thread-count="3" configfailurepolicy="continue">
+<suite name="Cyber System " verbose="1" parallel="tests" thread-count="2" configfailurepolicy="continue">
 	
 <!-- 	<test name="test1">
 		<parameter name="browserName" value="firefox" />		

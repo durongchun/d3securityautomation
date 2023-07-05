@@ -48,7 +48,9 @@ public class PhysicSystemLocator {
 	public static final By SaveButt = By.id("btnSave");
 	public static final By IncidentNumber = By.id("irView_IncidentNumberLabel");
 	public static final By IncidentReportIframe = By.xpath("//iframe[contains(@src,'VSOC')]");
-	public static final By SearchInput = By.id("txtKeywords");
+	public static final By SearchInput = By.id("txtKeywords"); 
 	public static final  String IRShowInGrid = "//td[contains(text(),'%s')]/.."; 
+	public static final By IframeForEntity = By.id("//iframe[contains(@src,'ConcurStatus')]");
+	
 	
 }

@@ -6,8 +6,8 @@
     <classes>
       <class name="com.d3security.testcase.PhysicSystemTest">
         <methods>
-          <include name="testPhysicFlow" invocation-numbers="0"/>
           <include name="beforeTest"/>
+          <include name="testPhysicFlow" invocation-numbers="0"/>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
           <include name="afterClass"/>

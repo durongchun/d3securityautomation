@@ -31,7 +31,7 @@ public class PhysicSystemTest extends BaseTest {
 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.signInPhysic(physicSystemData);	
-//		loginPage.LaunchVSOCManually();
+		//loginPage.LaunchVSOCManually();
 		
 		DashboardPage dashboard = new DashboardPage(driver);
 		dashboard.isDashboardExistingAndDisplayed();
@@ -44,10 +44,12 @@ public class PhysicSystemTest extends BaseTest {
 		AddIncidentReportPage addIncidentReportPage = new AddIncidentReportPage(driver);
 		addIncidentReportPage.newIncidentReportExistingAndDisplayed();
 		
-		addIncidentReportPage.clickArrestDetails();
-		addIncidentReportPage.clickNoOptionFromArrestDetails();
-		addIncidentReportPage.clickWorkplaceViolence();
-		addIncidentReportPage.selectOptionFromWorkplaceViolence(physicSystemData.getWorkplaceViolence());		
+		addIncidentReportPage.clickAccidentDetails();
+		addIncidentReportPage.selectTypeOfAccident(physicSystemData.getTypeofAccident());
+		addIncidentReportPage.clickInvolvedClown();
+		addIncidentReportPage.inputRequiredField(physicSystemData.getRequiredField());
+		addIncidentReportPage.clickMandatoryFields();		
+		addIncidentReportPage.inputMandatoryFields(physicSystemData.getMandatoryonSave(), physicSystemData.getMandatoryonClose());
 		addIncidentReportPage.clickSave();		
 		Validate.isTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(), "IncidentReport created successfully");		
 		

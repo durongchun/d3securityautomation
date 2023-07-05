@@ -16,6 +16,10 @@ public class PhysicSystemData {
 	private String DropDownOption;
 	private String ArrestDetails;
 	private String WorkplaceViolence;
+	private String TypeofAccident;
+	private String RequiredField;
+	private String MandatoryonSave;
+	private String MandatoryonClose;
 //	private Date date;
 //	private Double Index;
 

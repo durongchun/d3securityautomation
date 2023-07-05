@@ -33,6 +33,9 @@ public class IncidentReportsPage extends BasePage {
 		logger.info("Search IR");
 		sendInput(PhysicSystemLocator.SearchInput, input);
 		driver.findElement(PhysicSystemLocator.SearchInput).sendKeys(Keys.ENTER);
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
+		waitForSeconds(1);
 	}
 	
 	public boolean isDisplayingIR(String number) {		

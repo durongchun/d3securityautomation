@@ -31,7 +31,7 @@ public class HeaderPage extends BasePage {
 
 	public void clickAddNewIcon() {		
 		logger.info("Click Add New Icon");
-		waitForSeconds(5);		
+		waitForSeconds(1);		
 		mouseOverToElement(driver.findElement(PhysicSystemLocator.CreateIcon));
 		waitForSeconds(1);
 	}

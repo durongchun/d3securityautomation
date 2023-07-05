@@ -14,6 +14,32 @@ public class AddIncidentReportPage extends BasePage {
 		// TODO Auto-generated constructor stub
 
 	}
+	
+	public void clickAccidentDetails() {		
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
+		waitForSeconds(1);
+		clickElement(PhysicSystemLocator.AccidentDetails);
+		waitForSeconds(1);
+	}
+	
+	public void clickInvolvedClown() {		
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
+		waitForSeconds(1);
+		driver.switchTo().defaultContent();
+		clickElement(PhysicSystemLocator.InvolvedClown);
+		waitForSeconds(1);
+	}
+	
+	public void clickMandatoryFields() {		
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
+		waitForSeconds(1);
+		driver.switchTo().defaultContent();
+		clickElement(PhysicSystemLocator.MandatoryFields);
+		waitForSeconds(1);
+	}
 
 	public void clickArrestDetails() {
 		logger.info("Click Arrest Details");
@@ -44,6 +70,33 @@ public class AddIncidentReportPage extends BasePage {
 		waitForSeconds(2);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
 		clickElement(PhysicSystemLocator.NoCheckboxForArrestDetails);
+	}
+	
+	public void inputRequiredField(String text) {
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
+		waitForSeconds(1);
+		switchFrame(PhysicSystemLocator.IncidentReportIframe);
+		sendInput(PhysicSystemLocator.RequiredField, text);
+		waitForSeconds(1);
+	}
+	
+	public void inputMandatoryFields(String save, String close) {
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
+		waitForSeconds(1);
+		switchFrame(PhysicSystemLocator.IncidentReportIframe);
+		sendInput(PhysicSystemLocator.MandatoryOnSave, save);		
+		//sendInput(PhysicSystemLocator.MandatoryOnClose, close);
+		waitForSeconds(1);
+	}
+	
+	public void selectTypeOfAccident(String type) {
+		waitForSeconds(2);
+		switchFrame(PhysicSystemLocator.IncidentReportIframe);
+		if (type.contains("Posture")) {
+			clickElement(PhysicSystemLocator.PostureRadioBox);
+		}
 	}
 
 	public void selectOptionFromWorkplaceViolence(String value) {

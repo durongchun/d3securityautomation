@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-04T17:08:04 PDT" name="Physic System " finished-at="2023-07-04T17:09:13 PDT" duration-ms="69768">
+  <suite started-at="2023-07-05T19:52:55 PDT" name="Physic System " finished-at="2023-07-05T19:54:04 PDT" duration-ms="68871">
     <groups>
     </groups>
-    <test started-at="2023-07-04T17:08:04 PDT" name="test3" finished-at="2023-07-04T17:09:13 PDT" duration-ms="69768">
+    <test started-at="2023-07-05T19:52:55 PDT" name="test3" finished-at="2023-07-05T19:54:04 PDT" duration-ms="68871">
       <class name="com.d3security.testcase.PhysicSystemTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@2f6bcf87]" started-at="2023-07-04T17:08:04 PDT" name="beforeSuite" finished-at="2023-07-04T17:08:04 PDT" duration-ms="26" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@58f174d9]" started-at="2023-07-05T19:52:55 PDT" name="beforeSuite" finished-at="2023-07-05T19:52:55 PDT" duration-ms="26" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@2f6bcf87]" started-at="2023-07-04T17:08:04 PDT" name="beforeTest" finished-at="2023-07-04T17:08:05 PDT" duration-ms="1786" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@58f174d9]" started-at="2023-07-05T19:52:55 PDT" name="beforeTest" finished-at="2023-07-05T19:52:56 PDT" duration-ms="1243" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,90 +50,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@2f6bcf87]" started-at="2023-07-04T17:08:05 PDT" name="beforeClass" finished-at="2023-07-04T17:08:05 PDT" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@58f174d9]" started-at="2023-07-05T19:52:56 PDT" name="beforeClass" finished-at="2023-07-05T19:52:56 PDT" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="testPhysicFlow([Ljava.lang.Object;)[pri:1, instance:com.d3security.testcase.PhysicSystemTest@2f6bcf87]" started-at="2023-07-04T17:08:06 PDT" name="testPhysicFlow" description="Physic Login" data-provider="PhysicData" finished-at="2023-07-04T17:09:07 PDT" duration-ms="61257" status="FAIL">
+        <test-method signature="testPhysicAddCase([Ljava.lang.Object;)[pri:1, instance:com.d3security.testcase.PhysicSystemTest@58f174d9]" started-at="2023-07-05T19:52:56 PDT" name="testPhysicAddCase" description="Physic Add Case" data-provider="PhysicCaseData" finished-at="2023-07-05T19:53:57 PDT" duration-ms="60829" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6272c96f]]>
+                <![CDATA[[Ljava.lang.Object;@3c89bb12]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'VQAPC-LDU-1', ip: '192.168.1.201', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ldu\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:53295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 162c192f70938637507e711df9fb7c13]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'VQAPC-LDU-1', ip: '192.168.1.201', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ldu\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:53295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 162c192f70938637507e711df9fb7c13
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-at com.d3security.basepage.BaseBrowser.highlightElement(BaseBrowser.java:587)
-at com.d3security.basepage.BaseBrowser.isElementExists(BaseBrowser.java:538)
-at com.d3security.pageobject.page.physicsystem.IncidentReportsPage.isDisplayingIR(IncidentReportsPage.java:42)
-at com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:63)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.base/java.lang.Thread.run(Thread.java:834)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPhysicFlow -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@2f6bcf87]" started-at="2023-07-04T17:09:07 PDT" name="afterClass" finished-at="2023-07-04T17:09:07 PDT" duration-ms="1" status="PASS">
+        </test-method> <!-- testPhysicAddCase -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@58f174d9]" started-at="2023-07-05T19:53:57 PDT" name="afterClass" finished-at="2023-07-05T19:53:57 PDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@2f6bcf87]" started-at="2023-07-04T17:09:07 PDT" name="afterTest" finished-at="2023-07-04T17:09:13 PDT" duration-ms="6208" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@58f174d9]" started-at="2023-07-05T19:53:57 PDT" name="afterTest" finished-at="2023-07-05T19:54:04 PDT" duration-ms="6248" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@2f6bcf87]" started-at="2023-07-04T17:09:13 PDT" name="afterSuite" finished-at="2023-07-04T17:09:13 PDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@58f174d9]" started-at="2023-07-05T19:54:04 PDT" name="afterSuite" finished-at="2023-07-05T19:54:04 PDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

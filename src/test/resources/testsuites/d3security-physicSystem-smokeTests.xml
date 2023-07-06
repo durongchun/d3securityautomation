@@ -29,12 +29,23 @@
     	</classes>  
 	</test>  -->
 	
-	<test name="test3">  
+	<!--<test name="test3">  
    		<parameter name="browserName" value="chrome"/>      	
    	 	<classes>  
         	<class name="com.d3security.testcase.PhysicSystemTest"> 
         	<methods>
 					<include name="testPhysicFlow" />
+				</methods>
+			</class> 
+    	</classes>  
+	</test>-->
+	
+	<test name="test3">  
+   		<parameter name="browserName" value="chrome"/>      	
+   	 	<classes>  
+        	<class name="com.d3security.testcase.PhysicSystemTest"> 
+        	<methods>
+					<include name="testPhysicAddCase" />
 				</methods>
 			</class> 
     	</classes>  

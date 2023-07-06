@@ -15,38 +15,39 @@ public class HeaderPage extends BasePage {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void clickHamburgerMenu() {	
+	public void clickHamburgerMenu() {
 		logger.info("Click Hamburger Menu");
-		waitForSeconds(1);	
+		waitForSeconds(1);
 		switchFrame(PhysicSystemLocator.IframeID);
-		mouseOverToElement(driver.findElement(PhysicSystemLocator.HamburgerMenu));		
+		mouseOverToElement(driver.findElement(PhysicSystemLocator.HamburgerMenu));
 		clickElementWithJavaScript(driver, driver.findElement(PhysicSystemLocator.HamburgerMenu));
 	}
 
 	public void clickIncidentReportsMenu() {
 		logger.info("Click IncidentReports Menu");
-		waitForSeconds(1);	
-		clickElementWithJavaScript(driver,driver.findElement(PhysicSystemLocator.IncidentReportsMenu));
+		waitForSeconds(1);
+		clickElementWithJavaScript(driver, driver.findElement(PhysicSystemLocator.IncidentReportsMenu));
 	}
 
-	public void clickAddNewIcon() {		
+	public void clickAddNewIcon() {
 		logger.info("Click Add New Icon");
-		waitForSeconds(1);		
+		waitForSeconds(1);
 		mouseOverToElement(driver.findElement(PhysicSystemLocator.CreateIcon));
 		waitForSeconds(1);
 	}
 
 	public void selectOptionFromAddNewDropdown(String str) {
 		logger.info("Select dropdown " + str);
-		List<WebElement> elements = driver.findElements(PhysicSystemLocator.AddNewDropdownOptions);		
+		List<WebElement> elements = driver.findElements(PhysicSystemLocator.AddNewDropdownOptions);
 		for (WebElement ele : elements) {
 			if (ele.getText().equals(str)) {
-				//waitForSeconds(3);	
+				// waitForSeconds(3);
 				mouseOverToElement(ele);
 				click(ele);
 				isPageLoaded();
-				
+
 			}
+			elements = driver.findElements(PhysicSystemLocator.AddNewDropdownOptions);
 		}
 	}
 

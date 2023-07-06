@@ -10,6 +10,7 @@ import com.d3security.pageobject.data.PhysicSystemData;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
 import com.d3security.pageobject.page.LoginPage;
 import com.d3security.pageobject.page.SiteConfiguration;
+import com.d3security.pageobject.page.physicsystem.AddCasePage;
 import com.d3security.pageobject.page.physicsystem.AddIncidentReportPage;
 import com.d3security.pageobject.page.physicsystem.IncidentReportsPage;
 import com.d3security.pageobject.page.physicsystem.DashboardPage;
@@ -87,8 +88,13 @@ public class PhysicSystemTest extends BaseTest {
 		header.selectOptionFromAddNewDropdown(physicAddCaseData.getDropDownOption());
 		
 		//Create a new case
-		
-		
+		AddCasePage addCasePage = new AddCasePage(driver);
+		addCasePage.clickMandatoryField();
+		addCasePage.selectOwnerSite(physicAddCaseData.getOwnerSite());
+		addCasePage.ClickCreateButt();
+		final String caseNumber = addCasePage.getCaseNumber();
+		addCasePage.searchCase(caseNumber);
+		Validate.isTrue(addCasePage.isCaseCreatedSuccessfully(), "Case number is displayed in Grid");
 		
 		driver.manage().deleteAllCookies();
 	}

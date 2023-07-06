@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Physic_System_" class="navigator-link">
-              <span class="suite-name border-failed">Physic System </span>
+              <span class="suite-name border-passed">Physic System </span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Physic_System_" class="hide-methods failed suite-Physic_System_"> (hide)</a> <!-- hide-methods failed suite-Physic_System_ -->
-                      <a href="#" panel-name="suite-Physic_System_" class="show-methods failed suite-Physic_System_"> (show)</a> <!-- show-methods failed suite-Physic_System_ -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Physic_System_" class="hide-methods passed suite-Physic_System_"> (hide)</a> <!-- hide-methods passed suite-Physic_System_ -->
+                      <a href="#" panel-name="suite-Physic_System_" class="show-methods passed suite-Physic_System_"> (show)</a> <!-- show-methods passed suite-Physic_System_ -->
                     </span>
-                    <div class="method-list-content failed suite-Physic_System_">
+                    <div class="method-list-content passed suite-Physic_System_">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Physic_System_" title="com.d3security.testcase.PhysicSystemTest" class="method navigator-link" hash-for-method="testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@ccd251d9])">testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@ccd251d9])</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Physic_System_" title="com.d3security.testcase.PhysicSystemTest" class="method navigator-link" hash-for-method="testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ee111b84])">testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ee111b84])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Physic_System_ -->
+                    </div> <!-- method-list-content passed suite-Physic_System_ -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,50 +118,24 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Physic_System_" class="panel Physic_System_">
-          <div class="suite-Physic_System_-class-failed">
+          <div class="suite-Physic_System_-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.d3security.testcase.PhysicSystemTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@ccd251d9])">
-                  </a> <!-- testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@ccd251d9]) -->
-                  <span class="method-name">testPhysicFlow</span>
-                  <span class="parameters">([com.d3security.pageobject.data.PhysicSystemData@ccd251d9])</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;VQAPC-LDU-1&apos;, ip: &apos;192.168.1.201&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ldu\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:53295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 162c192f70938637507e711df9fb7c13
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-	at com.d3security.basepage.BaseBrowser.highlightElement(BaseBrowser.java:587)
-	at com.d3security.basepage.BaseBrowser.isElementExists(BaseBrowser.java:538)
-	at com.d3security.pageobject.page.physicsystem.IncidentReportsPage.isDisplayingIR(IncidentReportsPage.java:42)
-	at com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:63)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 21 stack frames
-</div> <!-- stack-trace -->
+                  <a name="testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ee111b84])">
+                  </a> <!-- testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ee111b84]) -->
+                  <span class="method-name">testPhysicAddCase</span>
+                  <span class="parameters">([com.d3security.pageobject.data.PhysicAddCaseData@ee111b84])</span>
                   <em>
-(Physic Login)                  </em>
+(Physic Add Case)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Physic_System_-class-failed -->
+          </div> <!-- suite-Physic_System_-class-passed -->
         </div> <!-- panel Physic_System_ -->
         <div panel-name="test-xml-Physic_System_" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -177,7 +151,7 @@ Session ID: 162c192f70938637507e711df9fb7c13
     &lt;classes&gt;
       &lt;class name=&quot;com.d3security.testcase.PhysicSystemTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testPhysicFlow&quot;/&gt;
+          &lt;include name=&quot;testPhysicAddCase&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.d3security.testcase.PhysicSystemTest --&gt;
     &lt;/classes&gt;
@@ -221,9 +195,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testPhysicFlow')
+data.setCell(0, 1, 'testPhysicAddCase')
 data.setCell(0, 2, 'com.d3security.testcase.PhysicSystemTest')
-data.setCell(0, 3, 61257);
+data.setCell(0, 3, 60829);
 window.suiteTableData['Physic_System_']= { tableData: data, tableDiv: 'times-div-Physic_System_'}
 return data;
 }
@@ -243,9 +217,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Physic_System_" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.d3security.testcase.PhysicSystemTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testPhysicFlow</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Physic_System_" class="panel">
@@ -261,29 +242,27 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest(chrome, pc, desktop, null, 4444, null)</span>
-                <span class="method-start">47 ms</span>
+                <span class="method-start">45 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">1840 ms</span>
+                <span class="method-start">1298 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@ccd251d9])</span>
-                <span class="method-start">2297 ms</span>
+                <span class="method-name">testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ee111b84])</span>
+                <span class="method-start">1770 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">63595 ms</span>
+                <span class="method-start">62656 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">63597 ms</span>
+                <span class="method-start">62657 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">69845 ms</span>
+                <span class="method-start">68925 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

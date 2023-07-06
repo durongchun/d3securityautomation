@@ -36,7 +36,7 @@ public class PhysicSystemLocator {
 	public static final By NewIncidentReportTitle = By.cssSelector("div.de-title");
 	public static final By AccidentDetails = By.xpath("//span[contains(text(),'Accident Details')]");
 	public static final By InvolvedClown = By.xpath("//span[contains(text(),'Involved Clown')]");
-	public static final By MandatoryFields = By.xpath("//span[contains(text(),'_Mandatory Fields')]");
+	public static final By MandatoryFields = By.xpath("//div[contains(text(),'_Mandatory Fields *')]");
 	public static final By PostureRadioBox = By.id("DFC2_dcElement821_2");
 	public static final By RequiredField = By.id("DFC2_dcElement21801");
 	public static final By MandatoryOnSave = By.id("DFC2_dcElement32329");
@@ -53,11 +53,13 @@ public class PhysicSystemLocator {
 	public static final By IframeForEntity = By.id("//iframe[contains(@src,'ConcurStatus')]");
 	
 	//----Case Management---	
-	public static final By OwnerSite = By.xpath("//div[contains(text(), 'Owner Site')]/..//div[@class='field-input']/span");
+	public static final By OwnerSiteBox = By.xpath("//tr[12]/td[1]/div[1]/div[1]/div[1]/div[2]/span[1]/span[1]/span[1]");
+	public static final By OwnerSiteDropdown = By.xpath("//div[@class='k-animation-container' ]//ul//li");
 	public static final By CreateButt = By.id("create_case");
 	public static final By CaseNumber = By.xpath("//td[contains(text(),'Case Number')]/..//td[@class='txt'][1]");
 	public static final By CaseSearchBox = By.cssSelector(".searchbox-text");
-	
+	public static final By OkButtOnAlert = By.cssSelector(".k-button");
+	public static final By Preview = By.xpath("//div[contains(text(),'Preview')]");
 	
 	
 }

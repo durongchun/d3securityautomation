@@ -1,5 +1,6 @@
 package com.d3security.testcase;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.alibaba.excel.util.Validate;
@@ -16,12 +17,14 @@ import com.d3security.pageobject.page.physicsystem.IncidentReportsPage;
 import com.d3security.pageobject.page.physicsystem.DashboardPage;
 import com.d3security.pageobject.page.physicsystem.HeaderPage;
 import com.d3security.util.dataprovider.ExcelDataProvider;
+import com.d3security.listener.CustomTestListener;
 
 import lombok.extern.slf4j.Slf4j;
 
+@Listeners(CustomTestListener.class)
 @Slf4j
 public class PhysicSystemTest extends BaseTest {
-
+	
 	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicData", description = "Physic Login", priority = 1)
 	public void testPhysicFlow(Object[] dataObject) {
 		PhysicSystemData physicSystemData = new PhysicSystemData();

@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="test3"
            tests="2"
-           failures="1"
+           failures="2"
            errors="0"
            skipped="0"
-           time="64.542">
+           time="20.116">
   <properties />
-            <testcase name="testPhysicFlow" time="14.683" classname="com.d3security.testcase.PhysicSystemTest">
+            <testcase name="testPhysicAddCase" time="10.079" classname="com.d3security.testcase.PhysicSystemTest">
                 <failure type="org.openqa.selenium.TimeoutException"
-                  message="Expected condition failed: waiting for presence of element located by: By.id: FrameOnLifeServer (tried for 10 second(s) with 500 milliseconds interval)"
+                  message="timeout: Timed out receiving message from renderer: -0.019
+  (Session info: chrome=114.0.5735.199)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LDU-HOME-1&apos;, ip: &apos;192.168.1.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 968d938c94697e698d51013e8fe51365"
               >
-<![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: FrameOnLifeServer (tried for 10 second(s) with 500 milliseconds interval)
-  org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-  org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-  com.d3security.basepage.BaseBrowser.locateElement(BaseBrowser.java:100)
-  com.d3security.basepage.BaseBrowser.switchFrame(BaseBrowser.java:264)
-  com.d3security.pageobject.page.physicsystem.DashboardPage.isDashboardExistingAndDisplayed(DashboardPage.java:20)
-  com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:39)
+<![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.019
+  (Session info: chrome=114.0.5735.199)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LDU-HOME-1', ip: '192.168.1.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 968d938c94697e698d51013e8fe51365
+  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+  java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+  org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+  com.d3security.basepage.BaseBrowser.enterPage(BaseBrowser.java:168)
+  com.d3security.pageobject.page.SiteConfiguration.enterPage(SiteConfiguration.java:18)
+  com.d3security.testcase.PhysicSystemTest.testPhysicAddCase(PhysicSystemTest.java:80)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -39,15 +59,27 @@
   java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
   java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
   java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#FrameOnLifeServer"}
+]]>
+      </failure>
+
+          </testcase>
+            <testcase name="testPhysicFlow" time="10.037" classname="com.d3security.testcase.PhysicSystemTest">
+                <failure type="org.openqa.selenium.TimeoutException"
+                  message="timeout: Timed out receiving message from renderer: -0.013
   (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'VQAPC-LDU-1', ip: '192.168.1.201', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LDU-HOME-1&apos;, ip: &apos;192.168.1.73&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ldu\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:63788}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fdb22f88981458e43d8265ce9d213ec2
-*** Element info: {Using=id, value=FrameOnLifeServer}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 968d938c94697e698d51013e8fe51365"
+              >
+<![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.013
+  (Session info: chrome=114.0.5735.199)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LDU-HOME-1', ip: '192.168.1.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55928}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 968d938c94697e698d51013e8fe51365
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -58,17 +90,10 @@ Session ID: fdb22f88981458e43d8265ce9d213ec2
   org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
   org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
   org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-  org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-  org.openqa.selenium.By$ById.findElement(By.java:188)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-  org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
-  org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
-  org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-  com.d3security.basepage.BaseBrowser.locateElement(BaseBrowser.java:100)
-  com.d3security.basepage.BaseBrowser.switchFrame(BaseBrowser.java:264)
-  com.d3security.pageobject.page.physicsystem.DashboardPage.isDashboardExistingAndDisplayed(DashboardPage.java:20)
-  com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:39)
+  org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+  com.d3security.basepage.BaseBrowser.enterPage(BaseBrowser.java:168)
+  com.d3security.pageobject.page.SiteConfiguration.enterPage(SiteConfiguration.java:18)
+  com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:35)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -97,6 +122,5 @@ Session ID: fdb22f88981458e43d8265ce9d213ec2
           </testcase>
   
   
-            <testcase name="testPhysicAddCase" time="49.859" classname="com.d3security.testcase.PhysicSystemTest" />
-      
+  
 </testsuite>

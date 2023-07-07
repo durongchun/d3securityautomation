@@ -1,240 +1,264 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.d3security</groupId>
-    <artifactId>webui-test</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    <name>Automation Test Web App</name>
+	<groupId>com.d3security</groupId>
+	<artifactId>webui-test</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>Automation Test Web App</name>
 
-    <!-- Attribute Config -->
-    <properties>
-        <!-- Specify the encoding method and JDK 8 -->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-        <!-- dependencies version -->
-        <lombok-version>1.18.4</lombok-version>
-        <junit-version>4.12</junit-version>
-        <slf4j-version>1.7.25</slf4j-version>
-        <log4j-version>2.19.0</log4j-version>
-        <testng-version>6.14.3</testng-version>
-        <selenium-version>3.141.59</selenium-version>
-        <htmlunit-version>2.30</htmlunit-version>
-        <extentreports-version>3.0.7</extentreports-version>
-        <commons-pool2-version>2.6.1</commons-pool2-version>
-        <jedis-version>3.0.1</jedis-version>
-        <poi-version>4.1.0</poi-version>
-        <httpclient-version>4.5.9</httpclient-version>
-        <gson-version>2.8.5</gson-version>
-        <allure-version>2.13.5</allure-version>
-        <compile-plugin-version>3.8.0</compile-plugin-version>
-        <surefire-plugin-version>2.22.1</surefire-plugin-version>
-        <aspectj-version>1.8.10</aspectj-version>
+	<!-- Attribute Config -->
+	<properties>
+		<!-- Specify the encoding method and JDK 8 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+		<!-- dependencies version -->
+		<lombok-version>1.18.4</lombok-version>
+		<junit-version>4.12</junit-version>
+		<slf4j-version>1.7.25</slf4j-version>
+		<log4j-version>2.19.0</log4j-version>
+		<testng-version>6.14.3</testng-version>
+		<selenium-version>3.141.59</selenium-version>
+		<htmlunit-version>2.30</htmlunit-version>
+		<extentreports-version>3.0.7</extentreports-version>
+		<commons-pool2-version>2.6.1</commons-pool2-version>
+		<jedis-version>3.0.1</jedis-version>
+		<poi-version>4.1.0</poi-version>
+		<httpclient-version>4.5.9</httpclient-version>
+		<gson-version>2.8.5</gson-version>
+		<allure-version>2.13.5</allure-version>
+		<compile-plugin-version>3.8.0</compile-plugin-version>
+		<surefire-plugin-version>2.22.1</surefire-plugin-version>
+		<aspectj-version>1.8.10</aspectj-version>
 		<mybatis-version>3.5.11</mybatis-version>
-        <!-- jenkins Parametric build -->
-       <!-- <xml.file>${env.xmlFileName}</xml.file>
+		<!-- jenkins Parametric build -->
+		<!-- <xml.file>${env.xmlFileName}</xml.file>
         <param1>${env.param1}</param1>
         <param2>${env.param2}</param2>
         <param3>${env.param3}</param3>-->
-    </properties>
+	</properties>
 
-    <!-- Dependencies Config -->
-    <dependencies>
-        <!-- lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok-version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- junit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit-version}</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- slf4j -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j-version}</version>
-        </dependency>
-        <!-- log4j -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4j-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>${log4j-version}</version>
-        </dependency>
-        <!-- testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testng-version}</version>
-        </dependency>
-        <!-- selenium -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>${selenium-version}</version>
-        </dependency>
-        <!-- htmlunit -->
-        <!-- A page analysis tool that provides various operations API -->
-        <dependency>
-            <groupId>net.sourceforge.htmlunit</groupId>
-            <artifactId>htmlunit</artifactId>
-            <version>${htmlunit-version}</version>
-        </dependency>
-        <!-- extentreports -->
-        <!-- Generate custom test reports -->
-        <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>${extentreports-version}</version>
-        </dependency>
-        <!-- commons-pool2 -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-            <version>${commons-pool2-version}</version>
-        </dependency>
-        <!-- redis -->
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>${jedis-version}</version>
-        </dependency>
+	<!-- Dependencies Config -->
+	<dependencies>
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-version}</version>
+		</dependency>
+		<!-- log4j -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j-version}</version>
+		</dependency>
+		<!-- testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng-version}</version>
+		</dependency>
+		<!-- selenium -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium-version}</version>
+		</dependency>
+		<!-- htmlunit -->
+		<!-- A page analysis tool that provides various operations API -->
+		<dependency>
+			<groupId>net.sourceforge.htmlunit</groupId>
+			<artifactId>htmlunit</artifactId>
+			<version>${htmlunit-version}</version>
+		</dependency>
+		<!-- extentreports -->
+		<!-- Generate custom test reports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extentreports-version}</version>
+		</dependency>
+		<!-- commons-pool2 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>${commons-pool2-version}</version>
+		</dependency>
+		<!-- redis -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis-version}</version>
+		</dependency>
 
-        <!-- httpclient -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>${httpclient-version}</version>
-        </dependency>
-        <!-- gson -->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${gson-version}</version>
-        </dependency>
-        <!-- allure 2 -->
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure-version}</version>
-        </dependency>
-		 <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-		 
+		<!-- httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpclient-version}</version>
+		</dependency>
+		<!-- gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson-version}</version>
+		</dependency>
+		<!-- allure 2 -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>${allure-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
 		<!-- Suggest to apply it to start -->
-		 <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>easyexcel</artifactId>
-            <version>3.1.1</version>
-        </dependency>
 		<dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>fastjson</artifactId>
-		    <version>2.0.14</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>easyexcel</artifactId>
+			<version>3.1.1</version>
 		</dependency>
 		<dependency>
-		  <groupId>org.mybatis</groupId>
-		  <artifactId>mybatis</artifactId>
-		  <version>${mybatis-version}</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>2.0.14</version>
 		</dependency>
 		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.30</version>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.30</version>
+		</dependency>
+		<!-- ReportNG -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>velocity</groupId>
+			<artifactId>velocity-dep</artifactId>
+			<version>1.4</version>
 		</dependency>
 
-    </dependencies>
+	</dependencies>
 
-    <!-- Build configuration -->
-    <build>
-        <plugins>
+
+	<!-- Build configuration -->
+	<build>
+		<plugins>
 			<plugin>
-			    <groupId>org.codehaus.mojo</groupId>
-			    <artifactId>exec-maven-plugin</artifactId>
-			    <version>1.2.1</version>
-			    <executions>
-			        <execution>
-			            <goals>
-			                <goal>java</goal>
-			            </goals>
-			        </execution>
-			    </executions>
-			    <configuration>
-			        <mainClass>com.path.to.MainFile</mainClass>
-			    </configuration>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>com.path.to.MainFile</mainClass>
+				</configuration>
 			</plugin>
-            <!-- Plugin compiler -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${compile-plugin-version}</version>
-                <configuration>
-                    <!-- jdk 1.8 to compile -->
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <!-- Plugin surefire -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${surefire-plugin-version}</version>
-                <configuration>
-                    <!-- allure 2 config -->
-                    <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj-version}/aspectjweaver-${aspectj-version}.jar"
-                    </argLine>
-                    <!-- Specify xml file -->
-                    <suiteXmlFiles>
-                        <!-- The parameters in jenkins can be passed in the form of dollar signs to specify the xml name to run -->
-                        <!-- <suiteXmlFile>${xml.file}</suiteXmlFile> -->
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <!-- Pass in xml -->
-                    <systemPropertyVariables>
-                        <!-- Jenkins parameter 1 -->
-                        <param1>${param1}</param1>
-                        <!-- Jenkins parameter 2 -->
-                        <param2>${param2}</param2>
-                        <!-- Jenkins parameter 3-->
-                        <param3>${param3}</param3>
-                    </systemPropertyVariables>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                </configuration>
-                <dependencies>
-                    <!-- allure 2 dependency config -->
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj-version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-			
-        </plugins>
-    </build>
+			<!-- Plugin compiler -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${compile-plugin-version}</version>
+				<configuration>
+					<!-- jdk 1.8 to compile -->
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<!-- Plugin surefire -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${surefire-plugin-version}</version>
+				<configuration>
+					<!-- allure 2 config -->
+					<argLine>
+						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj-version}/aspectjweaver-${aspectj-version}.jar"
+					</argLine>
+					<!-- Specify xml file -->
+					<suiteXmlFiles>
+						<!-- The parameters in jenkins can be passed in the form
+						of dollar signs to specify the xml name to run -->
+						<!-- <suiteXmlFile>${xml.file}</suiteXmlFile> -->
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<!-- Pass in xml -->
+					<systemPropertyVariables>
+						<!-- Jenkins parameter 1 -->
+						<param1>${param1}</param1>
+						<!-- Jenkins parameter 2 -->
+						<param2>${param2}</param2>
+						<!-- Jenkins parameter 3-->
+						<param3>${param3}</param3>
+					</systemPropertyVariables>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+				</configuration>
+				<dependencies>
+					<!-- allure 2 dependency config -->
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjweaver</artifactId>
+						<version>${aspectj-version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+		</plugins>
+	</build>
 </project>

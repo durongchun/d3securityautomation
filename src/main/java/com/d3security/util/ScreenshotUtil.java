@@ -63,4 +63,6 @@ public class ScreenshotUtil {
             log.error("The screenshot operation is exception!");
         }
     }
+    
+    
 }

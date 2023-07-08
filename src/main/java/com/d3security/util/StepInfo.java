@@ -116,8 +116,8 @@ public class StepInfo {
      * @param description a reason telling us why we failed the test
      */
     public static void failTest(final String description, WebDriver driver) {
-    	ScreenShooter.capture(driver);
-        final String message = formattedMessage(false, description);
+    	ScreenShooter.capture(driver);  
+    	final String message = formattedMessage(false, description);
         Reporter.log(message);
         logger.error(message);
         Assert.fail(message);

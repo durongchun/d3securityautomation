@@ -74,9 +74,9 @@ public final class ScreenShooter {
 			final File newFile = new File(targetPngFileName);
 
 			FileUtils.copyFile(imageFile, newFile.getAbsoluteFile());
-			FileUtilities.compressPngToJpg(targetPngFileName, targetJpgFileName);
-
-			logScreenShot(fileName, newFile.getAbsoluteFile());
+			FileUtilities.compressPngToJpg(targetPngFileName, targetJpgFileName);			
+			logScreenShot(System.getProperty("user.dir") + File.separator + "target" + File.separator 
+					+ "surefire-reports" + File.separator + "html" + File.separator + fileName, newFile.getAbsoluteFile());
 			imageFile.delete();
 		} catch (IOException e) {
 			logger.error(String.format("Could not save screenshot %s", fileName), e);
@@ -113,7 +113,7 @@ public final class ScreenShooter {
 	private static void logScreenShot(String fileName, File absoluteFile) {
 		Reporter.log(String.format("<br>" + "<div style=\"text-align:left\">" + "<a href=\"%s.jpg\">"
 				+ "<img src=\"%s.jpg\" alt=\"%s\" height=\"350\"/>" + "</a>" + "</div>" + "\n<br>", fileName,
-				fileName, fileName));
+				fileName, fileName));		
 		logger.info(String.format("Saving screenshot to %s", absoluteFile));
 	}
 

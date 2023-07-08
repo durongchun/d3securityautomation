@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[[Step #1] [Message]: Enter Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/]]>
-    </line>
-    <line>
-      <![CDATA[[Step #1] [Message]: Enter Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/]]>
-    </line>
-    <line>
-      <![CDATA[[Step #2] [Message]: Sign In]]>
+      <![CDATA[[Step #1] [Message]: Open Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/]]>
     </line>
     <line>
       <![CDATA[[Step #2] [Message]: Sign In]]>
@@ -17,16 +11,7 @@
       <![CDATA[[Step #3] [Message]: Dashboard is displaying]]>
     </line>
     <line>
-      <![CDATA[[Step #3] [Message]: Dashboard is displaying]]>
-    </line>
-    <line>
       <![CDATA[[Step #4] [Message]: Click Add New Icon]]>
-    </line>
-    <line>
-      <![CDATA[[Step #4] [Message]: Click Add New Icon]]>
-    </line>
-    <line>
-      <![CDATA[[Step #5] [Message]: Select dropdown Case Intake]]>
     </line>
     <line>
       <![CDATA[[Step #5] [Message]: Select dropdown Incident Report]]>
@@ -40,28 +25,13 @@
     <line>
       <![CDATA[[Step #8] [Message]: Save]]>
     </line>
-    <line>
-      <![CDATA[[Step #9] [Message]: Get IncidentReport number: 08072023-5]]>
-    </line>
-    <line>
-      <![CDATA[[Step #10] [Message]: Go D3vSOC Window]]>
-    </line>
-    <line>
-      <![CDATA[[Step #11] [Message]: Click Hamburger Menu]]>
-    </line>
-    <line>
-      <![CDATA[[Step #12] [Message]: Click IncidentReports Menu]]>
-    </line>
-    <line>
-      <![CDATA[[Step #13] [Message]: Search IR]]>
-    </line>
   </reporter-output>
-  <suite started-at="2023-07-07T22:31:30 PDT" name="Physic System " finished-at="2023-07-07T22:32:54 PDT" duration-ms="84164">
+  <suite started-at="2023-07-08T15:22:06 PDT" name="Physic System " finished-at="2023-07-08T15:24:14 PDT" duration-ms="127925">
     <groups>
     </groups>
-    <test started-at="2023-07-07T22:31:30 PDT" name="test3" finished-at="2023-07-07T22:32:18 PDT" duration-ms="48039">
+    <test started-at="2023-07-08T15:22:06 PDT" name="test2" finished-at="2023-07-08T15:24:14 PDT" duration-ms="127925">
       <class name="com.d3security.testcase.PhysicSystemTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@6bcbf05b]" started-at="2023-07-07T22:31:30 PDT" name="beforeSuite" finished-at="2023-07-07T22:31:30 PDT" duration-ms="58" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-08T15:22:06 PDT" name="beforeSuite" finished-at="2023-07-08T15:22:06 PDT" duration-ms="61" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -72,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@6bcbf05b]" started-at="2023-07-07T22:31:30 PDT" name="beforeTest" finished-at="2023-07-07T22:31:32 PDT" duration-ms="2234" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-08T15:22:06 PDT" name="beforeTest" finished-at="2023-07-08T15:22:08 PDT" duration-ms="1997" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -104,52 +74,32 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@6bcbf05b]" started-at="2023-07-07T22:31:32 PDT" name="beforeClass" finished-at="2023-07-07T22:31:32 PDT" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-08T15:22:08 PDT" name="beforeClass" finished-at="2023-07-08T15:22:08 PDT" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="testPhysicAddCase([Ljava.lang.Object;)[pri:1, instance:com.d3security.testcase.PhysicSystemTest@6bcbf05b]" started-at="2023-07-07T22:31:33 PDT" name="testPhysicAddCase" description="Physic Add Case" data-provider="PhysicCaseData" finished-at="2023-07-07T22:32:12 PDT" duration-ms="38476" status="FAIL">
+        <test-method signature="testPhysicFlow([Ljava.lang.Object;)[pri:1, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-08T15:22:09 PDT" name="testPhysicFlow" description="Physic Login" data-provider="PhysicData" finished-at="2023-07-08T15:24:07 PDT" duration-ms="118498" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@f2ce6b]]>
+                <![CDATA[[Ljava.lang.Object;@bc0f53b]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LDU-HOME-1', ip: '192.168.21.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59988}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 00036f5a427514fadcd9dcc8a425b93b]]>
+              <![CDATA[No reporters were started. Atleast 1 reporter must be started to create tests.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LDU-HOME-1', ip: '192.168.21.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59988}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 00036f5a427514fadcd9dcc8a425b93b
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
-at com.d3security.pageobject.page.physicsystem.AddCasePage.selectOwnerSite(AddCasePage.java:55)
-at com.d3security.testcase.PhysicSystemTest.testPhysicAddCase(PhysicSystemTest.java:94)
+              <![CDATA[java.lang.IllegalStateException: No reporters were started. Atleast 1 reporter must be started to create tests.
+at com.aventstack.extentreports.Report.createTest(Report.java:64)
+at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:232)
+at com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:245)
+at com.d3security.util.ScreenShooter.logScreenShot(ScreenShooter.java:140)
+at com.d3security.util.ScreenShooter.capture(ScreenShooter.java:87)
+at com.d3security.util.StepInfo.failTest(StepInfo.java:119)
+at com.d3security.util.Verify.verifyTrue(Verify.java:219)
+at com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:59)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -174,88 +124,10 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:834)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
             <line>
-              <![CDATA[[Step #1] [Message]: Enter Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/]]>
-            </line>
-            <line>
-              <![CDATA[[Step #2] [Message]: Sign In]]>
-            </line>
-            <line>
-              <![CDATA[[Step #3] [Message]: Dashboard is displaying]]>
-            </line>
-            <line>
-              <![CDATA[[Step #4] [Message]: Click Add New Icon]]>
-            </line>
-            <line>
-              <![CDATA[[Step #5] [Message]: Select dropdown Case Intake]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testPhysicAddCase -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@6bcbf05b]" started-at="2023-07-07T22:32:12 PDT" name="afterClass" finished-at="2023-07-07T22:32:12 PDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@6bcbf05b]" started-at="2023-07-07T22:32:12 PDT" name="afterTest" finished-at="2023-07-07T22:32:18 PDT" duration-ms="6493" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@6bcbf05b]" started-at="2023-07-07T22:32:54 PDT" name="afterSuite" finished-at="2023-07-07T22:32:54 PDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.d3security.testcase.PhysicSystemTest -->
-    </test> <!-- test3 -->
-    <test started-at="2023-07-07T22:31:30 PDT" name="test2" finished-at="2023-07-07T22:32:54 PDT" duration-ms="84164">
-      <class name="com.d3security.testcase.PhysicSystemTest">
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-07T22:31:30 PDT" name="beforeTest" finished-at="2023-07-07T22:31:32 PDT" duration-ms="2202" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[pc]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[desktop]]>
-              </value>
-            </param>
-            <param index="3">
-              <value is-null="true"/>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[4444]]>
-              </value>
-            </param>
-            <param index="5">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-07T22:31:32 PDT" name="beforeClass" finished-at="2023-07-07T22:31:32 PDT" duration-ms="31" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="testPhysicFlow([Ljava.lang.Object;)[pri:1, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-07T22:31:33 PDT" name="testPhysicFlow" description="Physic Login" data-provider="PhysicData" finished-at="2023-07-07T22:32:48 PDT" duration-ms="74637" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@7ea08277]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[[Step #1] [Message]: Enter Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/]]>
+              <![CDATA[[Step #1] [Message]: Open Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/]]>
             </line>
             <line>
               <![CDATA[[Step #2] [Message]: Sign In]]>
@@ -278,31 +150,20 @@ at java.base/java.lang.Thread.run(Thread.java:834)
             <line>
               <![CDATA[[Step #8] [Message]: Save]]>
             </line>
-            <line>
-              <![CDATA[[Step #9] [Message]: Get IncidentReport number: 08072023-5]]>
-            </line>
-            <line>
-              <![CDATA[[Step #10] [Message]: Go D3vSOC Window]]>
-            </line>
-            <line>
-              <![CDATA[[Step #11] [Message]: Click Hamburger Menu]]>
-            </line>
-            <line>
-              <![CDATA[[Step #12] [Message]: Click IncidentReports Menu]]>
-            </line>
-            <line>
-              <![CDATA[[Step #13] [Message]: Search IR]]>
-            </line>
           </reporter-output>
         </test-method> <!-- testPhysicFlow -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-07T22:32:48 PDT" name="afterClass" finished-at="2023-07-07T22:32:48 PDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-08T15:24:07 PDT" name="afterClass" finished-at="2023-07-08T15:24:07 PDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-07T22:32:48 PDT" name="afterTest" finished-at="2023-07-07T22:32:54 PDT" duration-ms="6561" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-08T15:24:07 PDT" name="afterTest" finished-at="2023-07-08T15:24:14 PDT" duration-ms="6589" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.d3security.testcase.PhysicSystemTest@29182679]" started-at="2023-07-08T15:24:14 PDT" name="afterSuite" finished-at="2023-07-08T15:24:14 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
       </class> <!-- com.d3security.testcase.PhysicSystemTest -->
     </test> <!-- test2 -->
   </suite> <!-- Physic System  -->

@@ -15,7 +15,7 @@ public class SiteConfiguration extends BasePage {
 	}
 
 	public void enterPage(String url) {
-		StepInfo.addMessage("Enter Website URL:" + url);
+		StepInfo.addMessage("Open Website URL:" + url);
 		super.enterPage(url);
 	}
 	

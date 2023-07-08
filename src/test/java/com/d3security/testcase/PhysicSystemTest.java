@@ -16,6 +16,7 @@ import com.d3security.pageobject.page.physicsystem.DashboardPage;
 import com.d3security.pageobject.page.physicsystem.HeaderPage;
 import com.d3security.pageobject.page.physicsystem.IncidentReportsPage;
 import com.d3security.util.StepInfo;
+import com.d3security.util.Verify;
 import com.d3security.util.dataprovider.ExcelDataProvider;
 
 import lombok.extern.slf4j.Slf4j;
@@ -55,8 +56,8 @@ public class PhysicSystemTest extends BaseTest {
 		addIncidentReportPage.inputMandatoryFields(physicSystemData.getMandatoryonSave(),
 				physicSystemData.getMandatoryonClose());
 		addIncidentReportPage.clickSave();
-		Validate.isTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
-				"IncidentReport created successfully");
+		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
+				"IncidentReport created successfully", driver);
 
 		final String incidentReportNo = addIncidentReportPage.getIncidentReportNumber();
 		IncidentReportsPage incidentReport = new IncidentReportsPage(driver);
@@ -64,7 +65,7 @@ public class PhysicSystemTest extends BaseTest {
 		header.clickHamburgerMenu();
 		header.clickIncidentReportsMenu();
 		incidentReport.searchIR(incidentReportNo);
-		Validate.isTrue(incidentReport.isDisplayingIR(incidentReportNo), "IncidentReport number is displayed in Grid");
+		Verify.verifyTrue(incidentReport.isDisplayingIR(incidentReportNo), "IncidentReport number is displayed in Grid", driver);
 
 		driver.manage().deleteAllCookies();
 	}

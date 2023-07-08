@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - test3</title>
+  <title>Test Results Report - test2</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>test3</h1>
+<h1>test2</h1>
 <p>
-  Test duration: 47.279s
+  Test duration: 127.180s
 </p>
 
 
@@ -25,47 +25,37 @@
             
 <tr>
   <td class="method">
-                  <span class="description" title="Physic Add Case">testPhysicAddCase</span>
+                  <span class="description" title="Physic Login">testPhysicFlow</span>
       </td>
   <td class="duration">
-    38.476s
+    118.498s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">[Ljava.lang.Object;@f2ce6b</span><br />
+          <i>Method arguments: </i><span class="arguments">[Ljava.lang.Object;@bc0f53b</span><br />
     
             <div class="testOutput">
-                        [Step #1] [Message]: Enter Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/<br />
+                        [Step #1] [Message]: Open Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/<br />
                                 [Step #2] [Message]: Sign In<br />
                                 [Step #3] [Message]: Dashboard is displaying<br />
                                 [Step #4] [Message]: Click Add New Icon<br />
-                                [Step #5] [Message]: Select dropdown Case Intake<br />
+                                [Step #5] [Message]: Select dropdown Incident Report<br />
+                                [Step #6] [Message]: Create IR<br />
+                                [Step #7] [Message]: Add IncidentReport Window is opening<br />
+                                [Step #8] [Message]: Save<br />
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found<br/>
-&nbsp; (Session info: chrome=114.0.5735.199)<br/>
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html<br/>
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;<br/>
-System info: host: &apos;LDU-HOME-1&apos;, ip: &apos;192.168.21.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;<br/>
-Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59988}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: 00036f5a427514fadcd9dcc8a425b93b</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.IllegalStateException: No reporters were started. Atleast 1 reporter must be started to create tests.</b></a><br />
     <div class="stackTrace" id="exception-0">
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
-              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)<br />
-              org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br />
-              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br />
-              org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br />
-              org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)<br />
-              org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)<br />
-              com.d3security.pageobject.page.physicsystem.AddCasePage.selectOwnerSite(AddCasePage.java:55)<br />
-              com.d3security.testcase.PhysicSystemTest.testPhysicAddCase(PhysicSystemTest.java:94)<br />
+              com.aventstack.extentreports.Report.createTest(Report.java:64)<br />
+              com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:232)<br />
+              com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:245)<br />
+              com.d3security.util.ScreenShooter.logScreenShot(ScreenShooter.java:140)<br />
+              com.d3security.util.ScreenShooter.capture(ScreenShooter.java:87)<br />
+              com.d3security.util.StepInfo.failTest(StepInfo.java:119)<br />
+              com.d3security.util.Verify.verifyTrue(Verify.java:219)<br />
+              com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:59)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />

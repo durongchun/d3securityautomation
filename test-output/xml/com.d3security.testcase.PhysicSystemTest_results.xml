@@ -1,44 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test3"
+<testsuite name="test2"
            tests="1"
            failures="1"
            errors="0"
            skipped="0"
-           time="38.476">
+           time="118.498">
   <properties />
-            <testcase name="testPhysicAddCase" time="38.476" classname="com.d3security.testcase.PhysicSystemTest">
-                <failure type="org.openqa.selenium.StaleElementReferenceException"
-                  message="stale element reference: stale element not found
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;LDU-HOME-1&apos;, ip: &apos;192.168.21.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59988}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 00036f5a427514fadcd9dcc8a425b93b"
+            <testcase name="testPhysicFlow" time="118.498" classname="com.d3security.testcase.PhysicSystemTest">
+                <failure type="java.lang.IllegalStateException"
+                  message="No reporters were started. Atleast 1 reporter must be started to create tests."
               >
-<![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LDU-HOME-1', ip: '192.168.21.55', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.18'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59988}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 00036f5a427514fadcd9dcc8a425b93b
-  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-  java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-  java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-  org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-  org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-  org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-  org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
-  com.d3security.pageobject.page.physicsystem.AddCasePage.selectOwnerSite(AddCasePage.java:55)
-  com.d3security.testcase.PhysicSystemTest.testPhysicAddCase(PhysicSystemTest.java:94)
+<![CDATA[java.lang.IllegalStateException: No reporters were started. Atleast 1 reporter must be started to create tests.
+  com.aventstack.extentreports.Report.createTest(Report.java:64)
+  com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:232)
+  com.aventstack.extentreports.ExtentReports.createTest(ExtentReports.java:245)
+  com.d3security.util.ScreenShooter.logScreenShot(ScreenShooter.java:140)
+  com.d3security.util.ScreenShooter.capture(ScreenShooter.java:87)
+  com.d3security.util.StepInfo.failTest(StepInfo.java:119)
+  com.d3security.util.Verify.verifyTrue(Verify.java:219)
+  com.d3security.testcase.PhysicSystemTest.testPhysicFlow(PhysicSystemTest.java:59)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

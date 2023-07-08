@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import com.d3security.basepage.BasePage;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
+import com.d3security.util.StepInfo;
 
 public class HeaderPage extends BasePage {
 
@@ -16,7 +17,7 @@ public class HeaderPage extends BasePage {
 	}
 
 	public void clickHamburgerMenu() {
-		logger.info("Click Hamburger Menu");
+		StepInfo.addMessage("Click Hamburger Menu");
 		waitForSeconds(1);
 		switchFrame(PhysicSystemLocator.IframeID);
 		mouseOverToElement(driver.findElement(PhysicSystemLocator.HamburgerMenu));
@@ -24,20 +25,20 @@ public class HeaderPage extends BasePage {
 	}
 
 	public void clickIncidentReportsMenu() {
-		logger.info("Click IncidentReports Menu");
+		StepInfo.addMessage("Click IncidentReports Menu");
 		waitForSeconds(1);
 		clickElementWithJavaScript(driver, driver.findElement(PhysicSystemLocator.IncidentReportsMenu));
 	}
 
 	public void clickAddNewIcon() {
-		logger.info("Click Add New Icon");
+		StepInfo.addMessage("Click Add New Icon");
 		waitForSeconds(1);
 		mouseOverToElement(driver.findElement(PhysicSystemLocator.CreateIcon));
 		waitForSeconds(1);
 	}
 
 	public void selectOptionFromAddNewDropdown(String str) {
-		logger.info("Select dropdown " + str);
+		StepInfo.addMessage("Select dropdown " + str);
 		List<WebElement> elements = driver.findElements(PhysicSystemLocator.AddNewDropdownOptions);
 		for (WebElement ele : elements) {
 			if (ele.getText().equals(str)) {

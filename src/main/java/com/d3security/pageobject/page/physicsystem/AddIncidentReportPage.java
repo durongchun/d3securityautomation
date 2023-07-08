@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.d3security.basepage.BasePage;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
+import com.d3security.util.StepInfo;
 
 public class AddIncidentReportPage extends BasePage {
 
@@ -42,7 +43,7 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public void clickArrestDetails() {
-		logger.info("Click Arrest Details");
+		StepInfo.addMessage("Click Arrest Details");
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 		waitForSeconds(1);
@@ -51,14 +52,14 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public void clickWorkplaceViolence() {
-		logger.info("Click Workplace Violence");
+		StepInfo.addMessage("Click Workplace Violence");
 		driver.switchTo().defaultContent();
 		clickElement(PhysicSystemLocator.WorkplaceViolence);
 		waitForSeconds(1);
 	}
 
 	public void clickSave() {
-		logger.info("Save");
+		StepInfo.addMessage("Save");
 		driver.switchTo().defaultContent();
 		clickElement(PhysicSystemLocator.SaveButt);
 		waitForJQueryToLoad();
@@ -66,7 +67,7 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public void clickNoOptionFromArrestDetails() {
-		logger.info("Choose No");
+		StepInfo.addMessage("Choose No");
 		waitForSeconds(2);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
 		clickElement(PhysicSystemLocator.NoCheckboxForArrestDetails);
@@ -100,14 +101,14 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public void selectOptionFromWorkplaceViolence(String value) {
-		logger.info("Choose " + value);
+		StepInfo.addMessage("Choose " + value);
 		waitForSeconds(2);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
 		selectDropdownByVisibleText(PhysicSystemLocator.WorkplaceViolenceOption, value);
 	}
 
 	public boolean newIncidentReportExistingAndDisplayed() {
-		logger.info("Add IncidentReport Window is opening");
+		StepInfo.addMessage("Add IncidentReport Window is opening");
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 		waitForSeconds(5);
@@ -132,7 +133,7 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public String getIncidentReportNumber() {
-		logger.info("Get IncidentReport number: " + driver.findElement(PhysicSystemLocator.IncidentNumber).getText());
+		StepInfo.addMessage("Get IncidentReport number: " + driver.findElement(PhysicSystemLocator.IncidentNumber).getText());
 		return driver.findElement(PhysicSystemLocator.IncidentNumber).getText();
 	}
 

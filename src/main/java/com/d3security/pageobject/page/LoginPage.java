@@ -9,6 +9,7 @@ import com.d3security.pageobject.data.CyberSystemData;
 import com.d3security.pageobject.data.PhysicSystemData;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
 import com.d3security.util.RedisUtil;
+import com.d3security.util.StepInfo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -65,7 +66,7 @@ public class LoginPage extends BasePage {
     }
 
 	public void signInPhysic(String userName, String passWord) {
-		log.info("Sign in");
+		StepInfo.addMessage("Sign In");
 		sendInput(PhysicSystemLocator.UserName, userName);
 		sendInput(PhysicSystemLocator.PassWord, passWord);
 		clickElement(PhysicSystemLocator.SubmitButt);

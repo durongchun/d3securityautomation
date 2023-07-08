@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 
 import com.d3security.basepage.BasePage;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
+import com.d3security.util.StepInfo;
 
 public class AddCasePage extends BasePage {
 
@@ -45,7 +46,7 @@ public class AddCasePage extends BasePage {
 	}
 
 	public void selectOwnerSite(String site) {
-		logger.info("Select dropdown " + site);
+		StepInfo.addMessage("Select dropdown " + site);
 		driver.switchTo().defaultContent();
 		clickElement(PhysicSystemLocator.OkButtOnAlert);
 		switchFrame(PhysicSystemLocator.IframeID);
@@ -53,7 +54,7 @@ public class AddCasePage extends BasePage {
 		List<WebElement> elements = driver.findElements(PhysicSystemLocator.OwnerSiteDropdown);
 		for (WebElement ele : elements) {
 			if (ele.getText().equals(site)) {
-				// waitForSeconds(3);
+				waitForSeconds(2);
 				mouseOverToElement(ele);
 				click(ele);
 				isPageLoaded();
@@ -71,7 +72,7 @@ public class AddCasePage extends BasePage {
 	}
 	
 	public void searchCase(String input) {
-		logger.info("Search Case");
+		StepInfo.addMessage("Search Case");
 		sendInput(PhysicSystemLocator.CaseSearchBox, input);
 		driver.findElement(PhysicSystemLocator.CaseSearchBox).sendKeys(Keys.ENTER);
 		waitForJQueryToLoad();
@@ -81,7 +82,7 @@ public class AddCasePage extends BasePage {
 
 	public String getCaseNumber() {
 		ClickPreview();
-		logger.info("Get Case number: " + driver.findElement(PhysicSystemLocator.CaseNumber).getText());
+		StepInfo.addMessage("Get Case number: " + driver.findElement(PhysicSystemLocator.CaseNumber).getText());
 		return driver.findElement(PhysicSystemLocator.CaseNumber).getText();
 	}
 

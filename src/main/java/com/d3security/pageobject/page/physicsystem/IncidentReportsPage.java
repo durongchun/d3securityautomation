@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.d3security.basepage.BasePage;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
+import com.d3security.util.StepInfo;
 
 public class IncidentReportsPage extends BasePage {
 
@@ -17,7 +18,7 @@ public class IncidentReportsPage extends BasePage {
 	}
 
 	public void goD3vSOCWindow() {
-		logger.info("Go D3vSOC Window");
+		StepInfo.addMessage("Go D3vSOC Window");
 		driver.close();
 		Set<String> allHandlesSet = driver.getWindowHandles();
 		for (String handle : allHandlesSet) {
@@ -30,7 +31,7 @@ public class IncidentReportsPage extends BasePage {
 	}
 
 	public void searchIR(String input) {
-		logger.info("Search IR");
+		StepInfo.addMessage("Search IR");
 		sendInput(PhysicSystemLocator.SearchInput, input);
 		driver.findElement(PhysicSystemLocator.SearchInput).sendKeys(Keys.ENTER);
 		waitForJQueryToLoad();

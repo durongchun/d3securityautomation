@@ -3,6 +3,7 @@ package com.d3security.pageobject.page;
 import org.openqa.selenium.WebDriver;
 
 import com.d3security.basepage.BasePage;
+import com.d3security.util.StepInfo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,7 +15,7 @@ public class SiteConfiguration extends BasePage {
 	}
 
 	public void enterPage(String url) {
-		log.info("Go to Physic System Login page");
+		StepInfo.addMessage("Enter Website URL:" + url);
 		super.enterPage(url);
 	}
 	

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Physic_System_" class="navigator-link">
-              <span class="suite-name border-passed">Physic System </span>
+              <span class="suite-name border-failed">Physic System </span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Physic_System_" class="navigator-link ">
-                    <span>C:\Users\ldu\git\d3securityautomation\src\test\resources\testsuites\d3security-physicSystem-smokeTests.xml</span>
+                    <span>F:\lucyWorkSpace\d3securityautomation\src\test\resources\testsuites\d3security-physicSystem-smokeTests.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Physic_System_" class="hide-methods failed suite-Physic_System_"> (hide)</a> <!-- hide-methods failed suite-Physic_System_ -->
+                      <a href="#" panel-name="suite-Physic_System_" class="show-methods failed suite-Physic_System_"> (show)</a> <!-- show-methods failed suite-Physic_System_ -->
+                    </span>
+                    <div class="method-list-content failed suite-Physic_System_">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Physic_System_" title="com.d3security.testcase.PhysicSystemTest" class="method navigator-link" hash-for-method="testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ec8818dc])">testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ec8818dc])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Physic_System_ -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,11 +115,6 @@
                       <a href="#" panel-name="suite-Physic_System_" class="show-methods passed suite-Physic_System_"> (show)</a> <!-- show-methods passed suite-Physic_System_ -->
                     </span>
                     <div class="method-list-content passed suite-Physic_System_">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Physic_System_" title="com.d3security.testcase.PhysicSystemTest" class="method navigator-link" hash-for-method="testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ec8818dc])">testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ec8818dc])</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Physic_System_" title="com.d3security.testcase.PhysicSystemTest" class="method navigator-link" hash-for-method="testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@474b3992])">testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@474b3992])</a> <!-- method navigator-link -->
@@ -123,9 +132,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Physic_System_" class="panel Physic_System_">
-          <div class="suite-Physic_System_-class-passed">
+          <div class="suite-Physic_System_-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.d3security.testcase.PhysicSystemTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -135,10 +144,43 @@
                   </a> <!-- testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ec8818dc]) -->
                   <span class="method-name">testPhysicAddCase</span>
                   <span class="parameters">([com.d3security.pageobject.data.PhysicAddCaseData@ec8818dc])</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.199)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LDU-HOME-1&apos;, ip: &apos;192.168.21.55&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\LUCYDU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59988}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00036f5a427514fadcd9dcc8a425b93b
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
+	at com.d3security.pageobject.page.physicsystem.AddCasePage.selectOwnerSite(AddCasePage.java:55)
+	at com.d3security.testcase.PhysicSystemTest.testPhysicAddCase(PhysicSystemTest.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 21 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Physic Add Case)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Physic_System_-class-failed -->
+          <div class="suite-Physic_System_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.d3security.testcase.PhysicSystemTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@474b3992])">
@@ -154,7 +196,7 @@
         </div> <!-- panel Physic_System_ -->
         <div panel-name="test-xml-Physic_System_" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ldu\git\d3securityautomation\src\test\resources\testsuites\d3security-physicSystem-smokeTests.xml</span>
+            <span class="header-content">F:\lucyWorkSpace\d3securityautomation\src\test\resources\testsuites\d3security-physicSystem-smokeTests.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -162,7 +204,6 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite configfailurepolicy=&quot;continue&quot; thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;Physic System &quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.d3security.listener.CustomTestListener&quot;/&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
   &lt;/listeners&gt;
@@ -230,11 +271,11 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testPhysicFlow')
 data.setCell(0, 2, 'com.d3security.testcase.PhysicSystemTest')
-data.setCell(0, 3, 60972);
+data.setCell(0, 3, 74637);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testPhysicAddCase')
 data.setCell(1, 2, 'com.d3security.testcase.PhysicSystemTest')
-data.setCell(1, 3, 46287);
+data.setCell(1, 3, 38476);
 window.suiteTableData['Physic_System_']= { tableData: data, tableDiv: 'times-div-Physic_System_'}
 return data;
 }
@@ -253,15 +294,29 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ec8818dc])</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">========== Start of Test Method ==========</span>
-                <span class="reporter-method-output">[INFO] Test Method Passed: testPhysicAddCase</span>
+                <span class="reporter-method-output">[Step #1] [Message]: Enter Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/</span>
+                <span class="reporter-method-output">[Step #2] [Message]: Sign In</span>
+                <span class="reporter-method-output">[Step #3] [Message]: Dashboard is displaying</span>
+                <span class="reporter-method-output">[Step #4] [Message]: Click Add New Icon</span>
+                <span class="reporter-method-output">[Step #5] [Message]: Select dropdown Case Intake</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@474b3992])</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">========== Start of Test Method ==========</span>
-                <span class="reporter-method-output">[INFO] Test Method Passed: testPhysicFlow</span>
+                <span class="reporter-method-output">[Step #1] [Message]: Enter Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/</span>
+                <span class="reporter-method-output">[Step #2] [Message]: Sign In</span>
+                <span class="reporter-method-output">[Step #3] [Message]: Dashboard is displaying</span>
+                <span class="reporter-method-output">[Step #4] [Message]: Click Add New Icon</span>
+                <span class="reporter-method-output">[Step #5] [Message]: Select dropdown Incident Report</span>
+                <span class="reporter-method-output">[Step #6] [Message]: Create IR</span>
+                <span class="reporter-method-output">[Step #7] [Message]: Add IncidentReport Window is opening</span>
+                <span class="reporter-method-output">[Step #8] [Message]: Save</span>
+                <span class="reporter-method-output">[Step #9] [Message]: Get IncidentReport number: 08072023-5</span>
+                <span class="reporter-method-output">[Step #10] [Message]: Go D3vSOC Window</span>
+                <span class="reporter-method-output">[Step #11] [Message]: Click Hamburger Menu</span>
+                <span class="reporter-method-output">[Step #12] [Message]: Click IncidentReports Menu</span>
+                <span class="reporter-method-output">[Step #13] [Message]: Search IR</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -274,9 +329,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.d3security.testcase.PhysicSystemTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testPhysicAddCase</span>
-                <br/>
                 <span class="ignored-method-name">testPhysicFlow</span>
+                <br/>
+                <span class="ignored-method-name">testPhysicAddCase</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -295,47 +350,49 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest(chrome, pc, desktop, null, 4444, null)</span>
-                <span class="method-start">50 ms</span>
+                <span class="method-start">101 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest(chrome, pc, desktop, null, 4444, null)</span>
-                <span class="method-start">50 ms</span>
+                <span class="method-start">101 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">1392 ms</span>
+                <span class="method-start">2320 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">1440 ms</span>
+                <span class="method-start">2336 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testPhysicFlow([com.d3security.pageobject.data.PhysicSystemData@474b3992])</span>
-                <span class="method-start">1915 ms</span>
+                <span class="method-start">3040 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testPhysicAddCase([com.d3security.pageobject.data.PhysicAddCaseData@ec8818dc])</span>
-                <span class="method-start">1915 ms</span>
+                <span class="method-start">3040 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">48243 ms</span>
+                <span class="method-start">41620 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">48244 ms</span>
+                <span class="method-start">41624 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">62889 ms</span>
+                <span class="method-start">77681 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">62889 ms</span>
+                <span class="method-start">77682 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">69106 ms</span>
+                <span class="method-start">84250 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

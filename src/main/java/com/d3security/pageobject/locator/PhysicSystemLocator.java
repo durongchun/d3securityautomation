@@ -36,7 +36,7 @@ public class PhysicSystemLocator {
 	public static final By NewIncidentReportTitle = By.cssSelector("div.de-title");
 	public static final By AccidentDetails = By.xpath("//span[contains(text(),'Accident Details')]");
 	public static final By InvolvedClown = By.xpath("//span[contains(text(),'Involved Clown')]");
-	public static final By MandatoryFields = By.xpath("//div[contains(text(),'_Mandatory Fields *')]");
+	public static final By MandatoryFields = By.xpath("//*[contains(text(),'_Mandatory Fields')]");
 	public static final By PostureRadioBox = By.id("DFC2_dcElement821_2");
 	public static final By RequiredField = By.id("DFC2_dcElement21801");
 	public static final By MandatoryOnSave = By.id("DFC2_dcElement32329");
@@ -60,6 +60,7 @@ public class PhysicSystemLocator {
 	public static final By CaseSearchBox = By.cssSelector(".searchbox-text");
 	public static final By OkButtOnAlert = By.cssSelector(".k-button");
 	public static final By Preview = By.xpath("//div[contains(text(),'Preview')]");
+	
 	
 	
 }

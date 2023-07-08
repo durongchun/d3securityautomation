@@ -33,7 +33,7 @@
     	</classes>  
 	</test>  -->
 	
-	<!--<test name="test2">  
+	<test name="test2">  
    		<parameter name="browserName" value="chrome"/>      	
    	 	<classes>  
         	<class name="com.d3security.testcase.PhysicSystemTest"> 
@@ -42,7 +42,7 @@
 				</methods>
 			</class> 
     	</classes>  
-	</test>-->
+	</test>
 	
 	<test name="test3">  
    		<parameter name="browserName" value="chrome"/>      	
@@ -50,7 +50,7 @@
         	<class name="com.d3security.testcase.PhysicSystemTest"> 
         	<methods>
 					<include name="testPhysicAddCase" />
-					<include name="testPhysicFlow" />
+					<!--<include name="testPhysicFlow" />-->
 				</methods>
 			</class> 
     	</classes>  

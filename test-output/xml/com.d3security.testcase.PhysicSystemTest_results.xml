@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test3"
+<testsuite name="test2"
            tests="1"
-           failures="0"
+           failures="1"
            errors="0"
            skipped="0"
-           time="34.433">
+           time="55.954">
   <properties />
+            <testcase name="testPhysicAddIR" time="55.954" classname="com.d3security.testcase.PhysicSystemTest">
+                <failure type="java.lang.AssertionError"
+                  message="[Step #9] [<b><font color="red">Failed</font></b>]: java.lang.AssertionError: IncidentReport created successfully expected [true] but found [false]"
+              >
+<![CDATA[java.lang.AssertionError: [Step #9] [<b><font color="red">Failed</font></b>]: java.lang.AssertionError: IncidentReport created successfully expected [true] but found [false]
+  org.testng.Assert.fail(Assert.java:111)
+  com.d3security.util.StepInfo.failTest(StepInfo.java:123)
+  com.d3security.util.Verify.verifyTrue(Verify.java:219)
+  com.d3security.testcase.PhysicSystemTest.testPhysicAddIR(PhysicSystemTest.java:59)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:566)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+  org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+  org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+  org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+  org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+  org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+  org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+  org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+  java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+  org.testng.TestRunner.privateRun(TestRunner.java:848)
+  org.testng.TestRunner.run(TestRunner.java:621)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+  org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+  org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+  java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+  java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+  java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+  java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+      </failure>
+
+          </testcase>
   
   
-            <testcase name="testPhysicAddCase" time="34.433" classname="com.d3security.testcase.PhysicSystemTest" />
-      
+  
 </testsuite>

@@ -167,10 +167,11 @@
 		</dependency>
 		<!-- ReportNG -->
 		<dependency>
-			<groupId>org.uncommons</groupId>
-			<artifactId>reportng</artifactId>
-			<version>1.1.4</version>
-			<exclusions>
+		    <groupId>org.uncommons</groupId>
+		    <artifactId>reportng</artifactId>
+		    <version>1.1.4</version>
+		    <scope>test</scope>
+		    <exclusions>
 				<exclusion>
 					<groupId>org.testng</groupId>
 					<artifactId>testng</artifactId>
@@ -261,4 +262,5 @@
 
 		</plugins>
 	</build>
+	
 </project>

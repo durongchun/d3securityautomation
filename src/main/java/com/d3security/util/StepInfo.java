@@ -185,7 +185,7 @@ public class StepInfo {
      */
     protected static String formattedMessage(final String description) {
         if (displayStepInfo.get()) {
-            return String.format("[Step #%d] [Message]: %s", getSteps(), description);
+            return String.format("[Step #%d] [Message]:<b> %s</b>", getSteps(), description);
         } else {
             return "";
         }

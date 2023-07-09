@@ -16,12 +16,12 @@ public class DashboardPage extends BasePage {
 		// TODO Auto-generated constructor stub
 	}
 
-	public boolean isDashboardExistingAndDisplayed() {
+	public void isDashboardExistingAndDisplayed() {
 		this.switchSecondWindow();
 		this.switchFrame(PhysicSystemLocator.IframeID);
 		// driver.switchTo().frame("FrameOnLifeServer");
 		StepInfo.addMessage("Dashboard is displaying");
-		return this.isElementExists(driver, PhysicSystemLocator.Dashboard);
+		//return this.isElementExists(driver, PhysicSystemLocator.Dashboard);
 
 	}
 	

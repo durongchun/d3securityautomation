@@ -25,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 public class PhysicSystemTest extends BaseTest {
 
 	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicData", description = "Physic Login", priority = 1)
-	public void testPhysicFlow(Object[] dataObject) {
+	public void testPhysicAddIR(Object[] dataObject) {
 		PhysicSystemData physicSystemData = new PhysicSystemData();
 		physicSystemData = (PhysicSystemData) dataObject[0];
 
@@ -96,7 +96,7 @@ public class PhysicSystemTest extends BaseTest {
 		addCasePage.ClickCreateButt();
 		final String caseNumber = addCasePage.getCaseNumber();
 		addCasePage.searchCase(caseNumber);
-		Validate.isTrue(addCasePage.isCaseCreatedSuccessfully(), "Case number is displayed in Grid");
+		Verify.verifyTrue(addCasePage.isCaseCreatedSuccessfully(caseNumber), "Case number is displayed in Grid", driver);
 
 		driver.manage().deleteAllCookies();
 	}

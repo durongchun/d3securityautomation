@@ -46,9 +46,9 @@ public class HeaderPage extends BasePage {
 				mouseOverToElement(ele);
 				click(ele);
 				isPageLoaded();
-
+				break;
 			}
-			elements = driver.findElements(PhysicSystemLocator.AddNewDropdownOptions);
+			
 		}
 	}
 

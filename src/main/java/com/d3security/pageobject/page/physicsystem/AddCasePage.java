@@ -32,12 +32,12 @@ public class AddCasePage extends BasePage {
 		clickElement(PhysicSystemLocator.CreateButt);
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
-		waitForSeconds(1);
+		waitForSeconds(2);
 
 	}
 	
 	public void ClickPreview() {
-		waitForSeconds(1);
+		waitForSeconds(2);
 		clickElement(PhysicSystemLocator.Preview);
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
@@ -54,21 +54,24 @@ public class AddCasePage extends BasePage {
 		List<WebElement> elements = driver.findElements(PhysicSystemLocator.OwnerSiteDropdown);
 		for (WebElement ele : elements) {
 			if (ele.getText().equals(site)) {
-				waitForSeconds(2);
+				waitForSeconds(3);				
 				mouseOverToElement(ele);
 				click(ele);
+				waitForJQueryToLoad();
+				waitForPageToRefresh();
 				isPageLoaded();
-				elements = driver.findElements(PhysicSystemLocator.OwnerSiteDropdown);
+				waitForSeconds(2);
+				break;
 			}
 		}
 
 	}
 
-	public boolean isCaseCreatedSuccessfully() {
+	public boolean isCaseCreatedSuccessfully(String caseNumber) {
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
-		waitForSeconds(2);		
-		return isElementExists(driver, PhysicSystemLocator.CaseNumber);
+		waitForSeconds(2);				
+		return isElementExists(driver, By.xpath(String.format(PhysicSystemLocator.IRShowInGrid, caseNumber)) );
 	}
 	
 	public void searchCase(String input) {
@@ -83,6 +86,7 @@ public class AddCasePage extends BasePage {
 	public String getCaseNumber() {
 		ClickPreview();
 		StepInfo.addMessage("Get Case number: " + driver.findElement(PhysicSystemLocator.CaseNumber).getText());
+		highlightElement(driver, PhysicSystemLocator.CaseNumber);
 		return driver.findElement(PhysicSystemLocator.CaseNumber).getText();
 	}
 

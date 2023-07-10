@@ -57,7 +57,7 @@ public class PhysicSystemTest extends BaseTest {
 				physicSystemData.getMandatoryonClose());
 		addIncidentReportPage.clickSave();
 		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
-				"IncidentReport created successfully", driver);
+				String.format("%s", "<b>IncidentReport created successfully</b>"), driver);
 
 		final String incidentReportNo = addIncidentReportPage.getIncidentReportNumber();
 		IncidentReportsPage incidentReport = new IncidentReportsPage(driver);
@@ -65,7 +65,8 @@ public class PhysicSystemTest extends BaseTest {
 		header.clickHamburgerMenu();
 		header.clickIncidentReportsMenu();
 		incidentReport.searchIR(incidentReportNo);
-		Verify.verifyTrue(incidentReport.isDisplayingIR(incidentReportNo), "IncidentReport number is displayed in Grid", driver);
+		Verify.verifyTrue(incidentReport.isDisplayingIR(incidentReportNo),
+				String.format("%s", "<b>IncidentReport number is displayed in Grid</b>"), driver);
 
 		driver.manage().deleteAllCookies();
 	}
@@ -96,7 +97,8 @@ public class PhysicSystemTest extends BaseTest {
 		addCasePage.ClickCreateButt();
 		final String caseNumber = addCasePage.getCaseNumber();
 		addCasePage.searchCase(caseNumber);
-		Verify.verifyTrue(addCasePage.isCaseCreatedSuccessfully(caseNumber), "Case number is displayed in Grid", driver);
+		Verify.verifyTrue(addCasePage.isCaseCreatedSuccessfully(caseNumber),
+				String.format("%s", "<b>Case number is displayed in Grid</b>"), driver);
 
 		driver.manage().deleteAllCookies();
 	}

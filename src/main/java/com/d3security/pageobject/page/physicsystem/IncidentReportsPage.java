@@ -39,7 +39,8 @@ public class IncidentReportsPage extends BasePage {
 		waitForSeconds(1);
 	}
 	
-	public boolean isDisplayingIR(String number) {		
+	public boolean isDisplayingIR(String number) {	
+		waitForPageToRefresh();
 		return isElementExists(driver, By.xpath(String.format(PhysicSystemLocator.IRShowInGrid, number)) );		
 	}
 

@@ -5,7 +5,7 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test thread-count="3" parallel="tests" name="test2(failed)">
+  <test thread-count="3" parallel="tests" name="test3(failed)">
     <parameter name="browserName" value="chrome"/>
     <classes>
       <class name="com.d3security.testcase.PhysicSystemTest">
@@ -14,11 +14,11 @@
           <include name="afterTest"/>
           <include name="beforeSuite"/>
           <include name="afterClass"/>
+          <include name="testPhysicAddCase" invocation-numbers="0"/>
           <include name="beforeClass"/>
-          <include name="testPhysicAddIR" invocation-numbers="0"/>
           <include name="afterSuite"/>
         </methods>
       </class> <!-- com.d3security.testcase.PhysicSystemTest -->
     </classes>
-  </test> <!-- test2(failed) -->
+  </test> <!-- test3(failed) -->
 </suite> <!-- Failed suite [Physic System ] -->

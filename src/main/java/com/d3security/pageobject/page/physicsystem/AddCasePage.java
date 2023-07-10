@@ -54,7 +54,7 @@ public class AddCasePage extends BasePage {
 		List<WebElement> elements = driver.findElements(PhysicSystemLocator.OwnerSiteDropdown);
 		for (WebElement ele : elements) {
 			if (ele.getText().equals(site)) {
-				waitForSeconds(3);				
+				waitForSeconds(5);				
 				mouseOverToElement(ele);
 				click(ele);
 				waitForJQueryToLoad();

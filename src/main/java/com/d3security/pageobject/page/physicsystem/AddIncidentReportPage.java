@@ -64,6 +64,7 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.SaveButt);
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
+		waitForSeconds(2);
 	}
 
 	public void clickNoOptionFromArrestDetails() {
@@ -128,6 +129,7 @@ public class AddIncidentReportPage extends BasePage {
 		waitForPageToRefresh();
 		waitForSeconds(6);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
+		waitForPageToRefresh();
 		waitForSeconds(6);
 		return isElementExists(driver, PhysicSystemLocator.IncidentNumber);
 	}

@@ -53,7 +53,9 @@ public class EasyExcelUtil {
 		EasyExcel.read(TestConstant.FILEPATH, CyberSystemData.class, new PageReadListener<CyberSystemData>(dataList -> {
 			for (CyberSystemData demoData : dataList) {
                 log.info("read a record{}", JSON.toJSONString(demoData));
-                excelList.add(demoData);
+                if (!demoData.getDescription().startsWith("//")) {
+                	excelList.add(demoData);
+				}
             }
 			
 		})).sheet("testCyber").doRead();
@@ -66,7 +68,9 @@ public class EasyExcelUtil {
 		EasyExcel.read(TestConstant.FILEPATH, PhysicSystemData.class, new PageReadListener<PhysicSystemData>(dataList -> {
 			for (PhysicSystemData demoData : dataList) {
                 log.info("read a record{}", JSON.toJSONString(demoData));
-                excelList.add(demoData);
+                if (!demoData.getDescription().startsWith("//")) {
+                	excelList.add(demoData);
+				}
             }
 			
 		})).sheet("testPhysic").doRead();
@@ -79,7 +83,9 @@ public class EasyExcelUtil {
 		EasyExcel.read(TestConstant.FILEPATH, PhysicAddCaseData.class, new PageReadListener<PhysicAddCaseData>(dataList -> {
 			for (PhysicAddCaseData demoData : dataList) {
                 log.info("read a record{}", JSON.toJSONString(demoData));
-                excelList.add(demoData);
+                if (!demoData.getDescription().startsWith("//")) {
+                	excelList.add(demoData);
+				}                
             }
 			
 		})).sheet("testPhysicAddCase").doRead();

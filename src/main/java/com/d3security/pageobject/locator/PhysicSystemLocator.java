@@ -51,6 +51,31 @@ public class PhysicSystemLocator {
 	public static final By SearchInput = By.id("txtKeywords"); 
 	public static final  String IRShowInGrid = "//td[contains(text(),'%s')]/.."; 
 	public static final By IframeForEntity = By.id("//iframe[contains(@src,'ConcurStatus')]");
+	//----Incident Report---General Information----	
+	public static final By IncidentType = By.cssSelector("#DpIRTypeList .custom-select span");
+	public static final By IncidentTypeInput = By.cssSelector("#DpIRTypeList .custom-select div input");
+	public static final By TitleInput = By.name("ucIRGInfo$titleTextbox");
+	public static final By AddRecipientsLink = By.id("ucIRGInfo_CcRecipientsModule_lnkRecipient");
+	public static final String  AddRecipients = "//option[contains(text(),'%s')]";
+	public static final By AddRecipientsUserSign = By.id("addressBook_btnAddUserSign");
+	public static final By AddRecipientsGroupSign = By.id("addressBook_btnAddGroupSign");
+	public static final By AddRecipientsDoneButt = By.id("addressBook_btnDone");
+	
+	public static final By NotifyRecipientOnce = By.id("ucIRGInfo_chkNotifyRecipientOnce");
+	public static final By IncidentEndedONDate = By.cssSelector("#ucIRGInfo_IncidentEndedOn_DatePanel img");
+	public static final By IncidentOccuredOn_Date = By.cssSelector("#ucIRGInfo_IncidentOccuredOn_DatePanel img");
+	public static final By PickTodayOnOccured = By.cssSelector(".ui-datepicker-today");
+	public static final String SelectDay = "//a[contains(text(),'%s')]";
+	public static final By OneTimeEmailOnSave = By.id("ucIRGInfo_otherEmailTextbox");
+	public static final By UseEmailNotiAssignRules = By.id("ucIRGInfo_chkAssignmentRules");	
+	public static final By NotifyCCRecipients = By.id("ucIRGInfo_chkNotifyRecipients");
+	public static final By Creator_OnIRCreateandEdit = By.id("ucIRGInfo_chkNotifyCreator");
+	public static final By Creator_OnIRClose = By.id("ucIRGInfo_cb_IR_notifyCreatorClose");
+	public static final By Creator_OnAssigneeReassign = By.id("ucIRGInfo_cbNotifyCreatorReassign");
+	public static final By Assignee_OnIRCreateandEdit = By.id("ucIRGInfo_chkNotifyAssignee");
+	public static final By Assignee_OnIRClose = By.id("ucIRGInfo_cb_IR_notifyAssigneeClose");
+	public static final By Assignee_OnAssigneeReassign = By.id("ucIRGInfo_cbNotifyAssigneeReassign");
+	
 	
 	//----Case Management---	
 	public static final By OwnerSiteBox = By.xpath("//tr[12]/td[1]/div[1]/div[1]/div[1]/div[2]/span[1]/span[1]/span[1]");

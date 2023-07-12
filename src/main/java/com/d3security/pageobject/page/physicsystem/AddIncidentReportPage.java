@@ -1,7 +1,7 @@
 package com.d3security.pageobject.page.physicsystem;
 
-import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import com.d3security.basepage.BasePage;
@@ -14,6 +14,10 @@ public class AddIncidentReportPage extends BasePage {
 		super(driver);
 		// TODO Auto-generated constructor stub
 
+	}
+	
+	public void clikIncidentType() {
+		clickElement(PhysicSystemLocator.IncidentType);		
 	}
 	
 	public void clickAccidentDetails() {		
@@ -91,6 +95,29 @@ public class AddIncidentReportPage extends BasePage {
 		sendInput(PhysicSystemLocator.MandatoryOnSave, save);		
 		//sendInput(PhysicSystemLocator.MandatoryOnClose, close);
 		waitForSeconds(1);
+	}
+	
+	public void inputTitle(String title) {
+		sendInput(PhysicSystemLocator.TitleInput, title);
+	}
+	
+	public void addCCRecipients(String user, String group) {
+		clickElement(PhysicSystemLocator.AddRecipientsLink);
+		driver.findElement(By.xpath(String.format(PhysicSystemLocator.AddRecipients, user))).click();
+		clickElement(PhysicSystemLocator.AddRecipientsUserSign);
+		driver.findElement(By.xpath(String.format(PhysicSystemLocator.AddRecipients, group))).click();
+		clickElement(PhysicSystemLocator.AddRecipientsGroupSign);
+		clickElement(PhysicSystemLocator.AddRecipientsDoneButt);
+		clickElement(PhysicSystemLocator.NotifyRecipientOnce);
+		
+	}
+	
+	public void selectIncidentType(String type) {
+		clikIncidentType();
+		sendInput(PhysicSystemLocator.IncidentTypeInput, type);
+		driver.findElement(PhysicSystemLocator.IncidentTypeInput).sendKeys(Keys.ENTER);		
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
 	}
 	
 	public void selectTypeOfAccident(String type) {

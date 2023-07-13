@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>TestNG:  test2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>test2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 13 14:47:59 PDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>68 seconds (68622 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.d3security.testcase.IncidentReportTest.testPhysicGeneralInformation()'><b>testPhysicGeneralInformation</b><br>Test class: com.d3security.testcase.IncidentReportTest<br>Test method: Physic IR GeneralInformation Test<br>Parameters: [Ljava.lang.Object;@16abef83<br/>
+<a href="#Output-929592921" onClick='toggleBox("Output-929592921", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-929592921" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-929592921">
+[Step #1] [Message]: Open Website URL:https://v2019.d3securityonline.net/V127Physical/VSOC/<br/>
+[Step #2] [Message]: Sign In<br/>
+[Step #3] [Message]: Dashboard is displaying<br/>
+[Step #4] [Message]: Click Add New Icon<br/>
+[Step #5] [Message]: Select dropdown Incident Report<br/>
+[Step #6] [Message]: Create IR<br/>
+[Step #7] [Message]: Add IncidentReport Window is opening<br/>
+[Step #8] [Message]: Save<br/>
+[Step #9] [Passed]: <b>IncidentReport created successfully</b><br/>
+[Step #10] [Message]: Get IncidentReport number: 13072023-5<br/>
+[Step #11] [Message]: Go D3vSOC Window<br/>
+[Step #12] [Message]: Click Hamburger Menu<br/>
+[Step #13] [Message]: Click IncidentReports Menu<br/>
+[Step #14] [Message]: Search IR<br/>
+[Step #15] [Passed]: <b>IncidentReport number is displayed in Grid</b><br/>
+</div>
+</td>
+<td></td>
+<td>60</td>
+<td>com.d3security.testcase.IncidentReportTest@5183d589</td></tr>
+</table><p>
+</body>
+</html>

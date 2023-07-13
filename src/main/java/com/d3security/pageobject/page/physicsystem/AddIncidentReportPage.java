@@ -1,5 +1,7 @@
 package com.d3security.pageobject.page.physicsystem;
 
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -16,20 +18,20 @@ public class AddIncidentReportPage extends BasePage {
 		// TODO Auto-generated constructor stub
 
 	}
-		
+
 	public void clikIncidentType() {
-		clickElement(PhysicSystemLocator.IncidentType);		
+		clickElement(PhysicSystemLocator.IncidentType);
 	}
-	
-	public void clickAccidentDetails() {		
+
+	public void clickAccidentDetails() {
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 		waitForSeconds(1);
 		clickElement(PhysicSystemLocator.AccidentDetails);
 		waitForSeconds(1);
 	}
-	
-	public void clickInvolvedClown() {		
+
+	public void clickInvolvedClown() {
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 		waitForSeconds(1);
@@ -37,8 +39,8 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.InvolvedClown);
 		waitForSeconds(1);
 	}
-	
-	public void clickMandatoryFields() {		
+
+	public void clickMandatoryFields() {
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 		waitForSeconds(1);
@@ -78,42 +80,43 @@ public class AddIncidentReportPage extends BasePage {
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
 		clickElement(PhysicSystemLocator.NoCheckboxForArrestDetails);
 	}
-	
+
+	public void checkNotifyRecipientOnce() {
+		clickElement(PhysicSystemLocator.NotifyRecipientOnce);
+	}
+
 	public void checkEmailNotifyAssignRules() {
 		clickElement(PhysicSystemLocator.UseEmailNotiAssignRules);
 	}
-	
+
 	public void checkNotifyCCRecipients() {
 		clickElement(PhysicSystemLocator.NotifyCCRecipients);
 	}
-	
+
 	public void checkNotifyCreatorOnIRCreateandEdit() {
 		clickElement(PhysicSystemLocator.Creator_OnIRCreateandEdit);
 	}
-	
+
 	public void checkNotifyCreatorOnIRClose() {
 		clickElement(PhysicSystemLocator.Creator_OnIRClose);
 	}
-	
+
 	public void checkNotifyCreatorOnAssigneeReassign() {
 		clickElement(PhysicSystemLocator.Creator_OnAssigneeReassign);
 	}
-	
+
 	public void checkNotifyAssigneeOnIRCreateandEdit() {
 		clickElement(PhysicSystemLocator.Assignee_OnIRCreateandEdit);
 	}
-	
+
 	public void checkNotifyAssigneeOnIRClose() {
 		clickElement(PhysicSystemLocator.Assignee_OnIRClose);
 	}
-	
+
 	public void checkNotifyAssigneeOnReassign() {
-		clickElement(PhysicSystemLocator.Creator_OnAssigneeReassign);
+		clickElement(PhysicSystemLocator.Assignee_OnAssigneeReassign);
 	}
-	
-	
-	
-	
+
 	public void inputRequiredField(String text) {
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
@@ -122,58 +125,70 @@ public class AddIncidentReportPage extends BasePage {
 		sendInput(PhysicSystemLocator.RequiredField, text);
 		waitForSeconds(1);
 	}
-	
+
 	public void inputMandatoryFields(String save, String close) {
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 		waitForSeconds(1);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
-		sendInput(PhysicSystemLocator.MandatoryOnSave, save);		
-		//sendInput(PhysicSystemLocator.MandatoryOnClose, close);
+		sendInput(PhysicSystemLocator.MandatoryOnSave, save);
+		// sendInput(PhysicSystemLocator.MandatoryOnClose, close);
 		waitForSeconds(1);
 	}
-	
+
 	public void inputTitle(String title) {
+		waitForSeconds(2);
 		sendInput(PhysicSystemLocator.TitleInput, title);
 	}
-	
+
 	public void inputOneTimeEmailNotifyOnSave(String email) {
 		sendInput(PhysicSystemLocator.OneTimeEmailOnSave, email);
-	}	
-	
+	}
+
 	public void addCCRecipients(String user, String group) {
 		clickElement(PhysicSystemLocator.AddRecipientsLink);
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
+		waitForSeconds(5);
+		driver.switchTo().defaultContent();
+		try {
+			switchHandleByTitle("Add recipient");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.findElement(By.xpath(String.format(PhysicSystemLocator.AddRecipients, user))).click();
 		clickElement(PhysicSystemLocator.AddRecipientsUserSign);
 		driver.findElement(By.xpath(String.format(PhysicSystemLocator.AddRecipients, group))).click();
 		clickElement(PhysicSystemLocator.AddRecipientsGroupSign);
 		clickElement(PhysicSystemLocator.AddRecipientsDoneButt);
-		clickElement(PhysicSystemLocator.NotifyRecipientOnce);
-		
+
 	}
-	
+
 	public void selectOccurredOn(String date) {
 		clickElement(PhysicSystemLocator.IncidentOccuredOnDate);
 		mouseOverToElement(driver.findElement(By.xpath(String.format(PhysicSystemLocator.SelectDay, date))));
 		clickElement(By.xpath(String.format(PhysicSystemLocator.SelectDay, date)));
-		
+
 	}
-	
+
 	public void selectEndedOn(String date) {
 		clickElement(PhysicSystemLocator.IncidentEndedONDate);
 		mouseOverToElement(driver.findElement(By.xpath(String.format(PhysicSystemLocator.SelectDay, date))));
 		clickElement(By.xpath(String.format(PhysicSystemLocator.SelectDay, date)));
-		
+
 	}
-	
+
 	public void selectIncidentType(String type) {
+		waitForSeconds(2);
+		switchFrame(PhysicSystemLocator.IncidentReportIframe);
 		clikIncidentType();
 		sendInput(PhysicSystemLocator.IncidentTypeInput, type);
-		driver.findElement(PhysicSystemLocator.IncidentTypeInput).sendKeys(Keys.ENTER);		
+		driver.findElement(PhysicSystemLocator.IncidentTypeInput).sendKeys(Keys.ENTER);
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
 	}
-	
+
 	public void selectTypeOfAccident(String type) {
 		waitForSeconds(2);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
@@ -205,6 +220,20 @@ public class AddIncidentReportPage extends BasePage {
 
 	}
 
+	public void goIncidentReportWindow() {
+		waitForSeconds(2);
+		// All windows
+		Set<String> allHandlesSet = driver.getWindowHandles();
+		// Find the window title
+		for (String handle : allHandlesSet) {
+			driver.switchTo().window(handle);
+			if (driver.getTitle().contains("Incident Report")) {
+				break;
+			}
+		}
+		switchFrame(PhysicSystemLocator.IncidentReportIframe);
+	}
+
 	public boolean isIncidentReportCreatedSuccessfully() {
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
@@ -216,7 +245,8 @@ public class AddIncidentReportPage extends BasePage {
 	}
 
 	public String getIncidentReportNumber() {
-		StepInfo.addMessage("Get IncidentReport number: " + driver.findElement(PhysicSystemLocator.IncidentNumber).getText());
+		StepInfo.addMessage(
+				"Get IncidentReport number: " + driver.findElement(PhysicSystemLocator.IncidentNumber).getText());
 		return driver.findElement(PhysicSystemLocator.IncidentNumber).getText();
 	}
 

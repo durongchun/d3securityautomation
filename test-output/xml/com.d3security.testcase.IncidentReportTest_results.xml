@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test2"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="60.803">
+  <properties />
+  
+  
+            <testcase name="testPhysicGeneralInformation" time="60.803" classname="com.d3security.testcase.IncidentReportTest" />
+      
+</testsuite>

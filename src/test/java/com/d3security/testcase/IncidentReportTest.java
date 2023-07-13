@@ -53,54 +53,48 @@ public class IncidentReportTest extends BaseTest {
 		addIncidentReportPage.inputTitle(generalInformationData.getTitle());
 		addIncidentReportPage.addCCRecipients(generalInformationData.getCcUsers(), generalInformationData.getCcGroups());
 		
-		if (generalInformationData.getNotifyRecipientOnce().equals("TRUE")) {
-			addIncidentReportPage.checkNotifyCCRecipients();
+		if (generalInformationData.getNotifyRecipientOnce().toLowerCase().equals("true")) {
+			addIncidentReportPage.goIncidentReportWindow();
+			addIncidentReportPage.checkNotifyRecipientOnce();
 		}
 		
 		addIncidentReportPage.selectOccurredOn(generalInformationData.getIncidentOccurredOn());		
-		addIncidentReportPage.selectOccurredOn(generalInformationData.getIncidentEndedOn());
+		addIncidentReportPage.selectEndedOn(generalInformationData.getIncidentEndedOn());
 		
 		addIncidentReportPage.inputOneTimeEmailNotifyOnSave(generalInformationData.getSendOneTimeEmailNotificationOnSave());
 		
-		if (generalInformationData.getEmailNotificationAssignmentRules().equals("TRUE")) {
+		if (generalInformationData.getEmailNotificationAssignmentRules().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkEmailNotifyAssignRules();
-		}
+		}		
 		
-		if (generalInformationData.getNotifyCCRecipientsOnCreateEditandClose().equals("TRUE")) {
+		if (generalInformationData.getNotifyCCRecipientsOnCreateEditandClose().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyCCRecipients();
 		}
 		
-		if (generalInformationData.getCreator_onIRCreateandEdit().equals("TRUE")) {
+		if (generalInformationData.getCreator_onIRCreateandEdit().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyCreatorOnIRCreateandEdit();
 		}
 		
-		if (generalInformationData.getCreator_onIRClose().equals("TRUE")) {
+		if (generalInformationData.getCreator_onIRClose().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyCreatorOnIRClose();
 		}
 		
-		if (generalInformationData.getCreator_onAssigneeReassign().equals("TRUE")) {
+		if (generalInformationData.getCreator_onAssigneeReassign().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyCreatorOnAssigneeReassign();
 		}
 		
-		if (generalInformationData.getAssignee_onIRCreateandEdit().equals("TRUE")) {
+		if (generalInformationData.getAssignee_onIRCreateandEdit().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyAssigneeOnIRCreateandEdit();
 		}
 		
-		if (generalInformationData.getAssignee_onIRClose().equals("TRUE")) {
+		if (generalInformationData.getAssignee_onIRClose().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyAssigneeOnIRClose();
 		}
 		
-		if (generalInformationData.getAssignee_onAssigneeReassign().equals("TRUE")) {
+		if (generalInformationData.getAssignee_onAssigneeReassign().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyAssigneeOnReassign();
 		}
 		
-		addIncidentReportPage.clickAccidentDetails();
-		addIncidentReportPage.selectTypeOfAccident(generalInformationData.getTypeofAccident());
-		addIncidentReportPage.clickInvolvedClown();
-		addIncidentReportPage.inputRequiredField(generalInformationData.getRequiredField());
-		addIncidentReportPage.clickMandatoryFields();
-		addIncidentReportPage.inputMandatoryFields(generalInformationData.getMandatoryonSave(),
-				generalInformationData.getMandatoryonClose());
 		addIncidentReportPage.clickSave();
 		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
 				String.format("%s", "<b>IncidentReport created successfully</b>"), driver);

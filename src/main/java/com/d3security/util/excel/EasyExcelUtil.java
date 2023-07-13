@@ -96,7 +96,7 @@ public class EasyExcelUtil {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static List readPhysicIRGeneralInformationDataExcel() {		
 		List excelList = new ArrayList<>(); 
-		EasyExcel.read(TestConstant.IRPATH, PhysicAddCaseData.class, new PageReadListener<IRGeneralInformationData>(dataList -> {
+		EasyExcel.read(TestConstant.IRPATH, IRGeneralInformationData.class, new PageReadListener<IRGeneralInformationData>(dataList -> {
 			for (IRGeneralInformationData data : dataList) {
                 log.info("read a record{}", JSON.toJSONString(data));
                 if (!data.getDescription().startsWith("//")) {
@@ -104,7 +104,7 @@ public class EasyExcelUtil {
 				}                
             }
 			
-		})).sheet("testIR_GeneralInformation").doRead();
+		})).sheet("test_IR_GeneralInformation").doRead();
 		return excelList;
 	}
 

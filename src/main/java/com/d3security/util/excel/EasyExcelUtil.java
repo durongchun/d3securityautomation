@@ -12,7 +12,7 @@ import com.d3security.constant.TestConstant;
 import com.d3security.pageobject.data.CyberSystemData;
 import com.d3security.pageobject.data.PhysicAddCaseData;
 import com.d3security.pageobject.data.PhysicSystemData;
-import com.d3security.pageobject.data.ir.IRGeneralInformationData;
+import com.d3security.pageobject.data.incidentreport.IRGeneralInformationData;
 
 import lombok.extern.slf4j.Slf4j;
 

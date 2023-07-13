@@ -1,4 +1,4 @@
-package com.d3security.pageobject.data.ir;
+package com.d3security.pageobject.data.incidentreport;
 import java.util.Date;
 
 import lombok.EqualsAndHashCode;

@@ -1,4 +1,4 @@
-package com.d3security.testcase.ir;
+package com.d3security.testcase;
 
 import org.testng.annotations.Test;
 
@@ -7,7 +7,7 @@ import com.d3security.basepage.BaseBrowser;
 import com.d3security.basetest.BaseTest;
 import com.d3security.pageobject.data.PhysicAddCaseData;
 import com.d3security.pageobject.data.PhysicSystemData;
-import com.d3security.pageobject.data.ir.IRGeneralInformationData;
+import com.d3security.pageobject.data.incidentreport.IRGeneralInformationData;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
 import com.d3security.pageobject.page.LoginPage;
 import com.d3security.pageobject.page.SiteConfiguration;
@@ -23,7 +23,7 @@ import com.d3security.util.dataprovider.ExcelDataProvider;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class GeneralInformationTest extends BaseTest {
+public class IncidentReportTest extends BaseTest {
 
 	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicIRData", description = "Physic IR GeneralInformation Test", priority = 1)
 	public void testPhysicGeneralInformation(Object[] dataObject) {
@@ -52,6 +52,7 @@ public class GeneralInformationTest extends BaseTest {
 		addIncidentReportPage.selectIncidentType(generalInformationData.getIncidentType());
 		addIncidentReportPage.inputTitle(generalInformationData.getTitle());
 		addIncidentReportPage.addCCRecipients(generalInformationData.getCcUsers(), generalInformationData.getCcGroups());
+		
 		if (generalInformationData.getNotifyRecipientOnce().equals("TRUE")) {
 			addIncidentReportPage.checkNotifyCCRecipients();
 		}
@@ -60,15 +61,38 @@ public class GeneralInformationTest extends BaseTest {
 		addIncidentReportPage.selectOccurredOn(generalInformationData.getIncidentEndedOn());
 		
 		addIncidentReportPage.inputOneTimeEmailNotifyOnSave(generalInformationData.getSendOneTimeEmailNotificationOnSave());
-		addIncidentReportPage.checkEmailNotifyAssignRules();
-		addIncidentReportPage.checkNotifyCCRecipients();
-		addIncidentReportPage.checkNotifyCreatorOnIRCreateandEdit();
-		addIncidentReportPage.checkNotifyCreatorOnIRClose();
-		addIncidentReportPage.checkNotifyCreatorOnAssigneeReassign();
-		addIncidentReportPage.checkNotifyAssigneeOnIRCreateandEdit();
-		addIncidentReportPage.checkNotifyAssigneeOnIRClose();
-		addIncidentReportPage.checkNotifyAssigneeOnReassign();
 		
+		if (generalInformationData.getEmailNotificationAssignmentRules().equals("TRUE")) {
+			addIncidentReportPage.checkEmailNotifyAssignRules();
+		}
+		
+		if (generalInformationData.getNotifyCCRecipientsOnCreateEditandClose().equals("TRUE")) {
+			addIncidentReportPage.checkNotifyCCRecipients();
+		}
+		
+		if (generalInformationData.getCreator_onIRCreateandEdit().equals("TRUE")) {
+			addIncidentReportPage.checkNotifyCreatorOnIRCreateandEdit();
+		}
+		
+		if (generalInformationData.getCreator_onIRClose().equals("TRUE")) {
+			addIncidentReportPage.checkNotifyCreatorOnIRClose();
+		}
+		
+		if (generalInformationData.getCreator_onAssigneeReassign().equals("TRUE")) {
+			addIncidentReportPage.checkNotifyCreatorOnAssigneeReassign();
+		}
+		
+		if (generalInformationData.getAssignee_onIRCreateandEdit().equals("TRUE")) {
+			addIncidentReportPage.checkNotifyAssigneeOnIRCreateandEdit();
+		}
+		
+		if (generalInformationData.getAssignee_onIRClose().equals("TRUE")) {
+			addIncidentReportPage.checkNotifyAssigneeOnIRClose();
+		}
+		
+		if (generalInformationData.getAssignee_onAssigneeReassign().equals("TRUE")) {
+			addIncidentReportPage.checkNotifyAssigneeOnReassign();
+		}
 		
 		addIncidentReportPage.clickAccidentDetails();
 		addIncidentReportPage.selectTypeOfAccident(generalInformationData.getTypeofAccident());

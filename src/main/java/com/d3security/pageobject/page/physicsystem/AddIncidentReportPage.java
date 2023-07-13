@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import com.d3security.basepage.BasePage;
+import com.d3security.pageobject.data.incidentreport.IRGeneralInformationData;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
 import com.d3security.util.StepInfo;
 
@@ -15,7 +16,7 @@ public class AddIncidentReportPage extends BasePage {
 		// TODO Auto-generated constructor stub
 
 	}
-	
+		
 	public void clikIncidentType() {
 		clickElement(PhysicSystemLocator.IncidentType);		
 	}

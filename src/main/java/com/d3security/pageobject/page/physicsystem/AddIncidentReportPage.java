@@ -78,6 +78,41 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.NoCheckboxForArrestDetails);
 	}
 	
+	public void checkEmailNotifyAssignRules() {
+		clickElement(PhysicSystemLocator.UseEmailNotiAssignRules);
+	}
+	
+	public void checkNotifyCCRecipients() {
+		clickElement(PhysicSystemLocator.NotifyCCRecipients);
+	}
+	
+	public void checkNotifyCreatorOnIRCreateandEdit() {
+		clickElement(PhysicSystemLocator.Creator_OnIRCreateandEdit);
+	}
+	
+	public void checkNotifyCreatorOnIRClose() {
+		clickElement(PhysicSystemLocator.Creator_OnIRClose);
+	}
+	
+	public void checkNotifyCreatorOnAssigneeReassign() {
+		clickElement(PhysicSystemLocator.Creator_OnAssigneeReassign);
+	}
+	
+	public void checkNotifyAssigneeOnIRCreateandEdit() {
+		clickElement(PhysicSystemLocator.Assignee_OnIRCreateandEdit);
+	}
+	
+	public void checkNotifyAssigneeOnIRClose() {
+		clickElement(PhysicSystemLocator.Assignee_OnIRClose);
+	}
+	
+	public void checkNotifyAssigneeOnReassign() {
+		clickElement(PhysicSystemLocator.Creator_OnAssigneeReassign);
+	}
+	
+	
+	
+	
 	public void inputRequiredField(String text) {
 		waitForJQueryToLoad();
 		waitForPageToRefresh();
@@ -101,6 +136,10 @@ public class AddIncidentReportPage extends BasePage {
 		sendInput(PhysicSystemLocator.TitleInput, title);
 	}
 	
+	public void inputOneTimeEmailNotifyOnSave(String email) {
+		sendInput(PhysicSystemLocator.OneTimeEmailOnSave, email);
+	}	
+	
 	public void addCCRecipients(String user, String group) {
 		clickElement(PhysicSystemLocator.AddRecipientsLink);
 		driver.findElement(By.xpath(String.format(PhysicSystemLocator.AddRecipients, user))).click();
@@ -109,6 +148,20 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.AddRecipientsGroupSign);
 		clickElement(PhysicSystemLocator.AddRecipientsDoneButt);
 		clickElement(PhysicSystemLocator.NotifyRecipientOnce);
+		
+	}
+	
+	public void selectOccurredOn(String date) {
+		clickElement(PhysicSystemLocator.IncidentOccuredOnDate);
+		mouseOverToElement(driver.findElement(By.xpath(String.format(PhysicSystemLocator.SelectDay, date))));
+		clickElement(By.xpath(String.format(PhysicSystemLocator.SelectDay, date)));
+		
+	}
+	
+	public void selectEndedOn(String date) {
+		clickElement(PhysicSystemLocator.IncidentEndedONDate);
+		mouseOverToElement(driver.findElement(By.xpath(String.format(PhysicSystemLocator.SelectDay, date))));
+		clickElement(By.xpath(String.format(PhysicSystemLocator.SelectDay, date)));
 		
 	}
 	

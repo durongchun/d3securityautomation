@@ -63,7 +63,7 @@ public class PhysicSystemLocator {
 	
 	public static final By NotifyRecipientOnce = By.id("ucIRGInfo_chkNotifyRecipientOnce");
 	public static final By IncidentEndedONDate = By.cssSelector("#ucIRGInfo_IncidentEndedOn_DatePanel img");
-	public static final By IncidentOccuredOn_Date = By.cssSelector("#ucIRGInfo_IncidentOccuredOn_DatePanel img");
+	public static final By IncidentOccuredOnDate = By.cssSelector("#ucIRGInfo_IncidentOccuredOn_DatePanel img");
 	public static final By PickTodayOnOccured = By.cssSelector(".ui-datepicker-today");
 	public static final String SelectDay = "//a[contains(text(),'%s')]";
 	public static final By OneTimeEmailOnSave = By.id("ucIRGInfo_otherEmailTextbox");

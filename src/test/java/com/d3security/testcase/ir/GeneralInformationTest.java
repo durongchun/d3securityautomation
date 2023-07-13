@@ -48,6 +48,49 @@ public class GeneralInformationTest extends BaseTest {
 		StepInfo.addMessage("Create IR");
 		AddIncidentReportPage addIncidentReportPage = new AddIncidentReportPage(driver);
 		addIncidentReportPage.newIncidentReportExistingAndDisplayed();
+		
+		addIncidentReportPage.selectIncidentType(generalInformationData.getIncidentType());
+		addIncidentReportPage.inputTitle(generalInformationData.getTitle());
+		addIncidentReportPage.addCCRecipients(generalInformationData.getCcUsers(), generalInformationData.getCcGroups());
+		if (generalInformationData.getNotifyRecipientOnce().equals("TRUE")) {
+			addIncidentReportPage.checkNotifyCCRecipients();
+		}
+		
+		addIncidentReportPage.selectOccurredOn(generalInformationData.getIncidentOccurredOn());		
+		addIncidentReportPage.selectOccurredOn(generalInformationData.getIncidentEndedOn());
+		
+		addIncidentReportPage.inputOneTimeEmailNotifyOnSave(generalInformationData.getSendOneTimeEmailNotificationOnSave());
+		addIncidentReportPage.checkEmailNotifyAssignRules();
+		addIncidentReportPage.checkNotifyCCRecipients();
+		addIncidentReportPage.checkNotifyCreatorOnIRCreateandEdit();
+		addIncidentReportPage.checkNotifyCreatorOnIRClose();
+		addIncidentReportPage.checkNotifyCreatorOnAssigneeReassign();
+		addIncidentReportPage.checkNotifyAssigneeOnIRCreateandEdit();
+		addIncidentReportPage.checkNotifyAssigneeOnIRClose();
+		addIncidentReportPage.checkNotifyAssigneeOnReassign();
+		
+		
+		addIncidentReportPage.clickAccidentDetails();
+		addIncidentReportPage.selectTypeOfAccident(generalInformationData.getTypeofAccident());
+		addIncidentReportPage.clickInvolvedClown();
+		addIncidentReportPage.inputRequiredField(generalInformationData.getRequiredField());
+		addIncidentReportPage.clickMandatoryFields();
+		addIncidentReportPage.inputMandatoryFields(generalInformationData.getMandatoryonSave(),
+				generalInformationData.getMandatoryonClose());
+		addIncidentReportPage.clickSave();
+		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
+				String.format("%s", "<b>IncidentReport created successfully</b>"), driver);
+
+		final String incidentReportNo = addIncidentReportPage.getIncidentReportNumber();
+		IncidentReportsPage incidentReport = new IncidentReportsPage(driver);
+		incidentReport.goD3vSOCWindow();
+		header.clickHamburgerMenu();
+		header.clickIncidentReportsMenu();
+		incidentReport.searchIR(incidentReportNo);
+		Verify.verifyTrue(incidentReport.isDisplayingIR(incidentReportNo),
+				String.format("%s", "<b>IncidentReport number is displayed in Grid</b>"), driver);
+
+		driver.manage().deleteAllCookies();
 
 	}
 }

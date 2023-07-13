@@ -36,6 +36,12 @@ public class IRGeneralInformationData {
 	private String assignee_onIRCreateandEdit;
 	private String assignee_onIRClose;
 	private String assignee_onAssigneeReassign;
+	private String ArrestDetails;
+	private String WorkplaceViolence;
+	private String TypeofAccident;
+	private String RequiredField;
+	private String MandatoryonSave;
+	private String MandatoryonClose;
 
 	
 	

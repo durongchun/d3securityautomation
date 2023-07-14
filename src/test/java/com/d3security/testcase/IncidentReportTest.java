@@ -111,4 +111,48 @@ public class IncidentReportTest extends BaseTest {
 		driver.manage().deleteAllCookies();
 
 	}
+	
+	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicIRData", description = "Physic IR GeneralInformation Test", priority = 1)
+	public void testPhysicAllElements(Object[] dataObject) {
+		IRGeneralInformationData generalInformationData = new IRGeneralInformationData();
+		generalInformationData = (IRGeneralInformationData) dataObject[0];
+
+		PhysicSystemLocator physicSystemLocator = new PhysicSystemLocator();
+		new SiteConfiguration(driver).enterPage(physicSystemLocator.url);
+
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.signInPhysic(generalInformationData.getUserName(), generalInformationData.getPassWord());
+		// loginPage.LaunchVSOCManually();
+
+		DashboardPage dashboard = new DashboardPage(driver);
+		dashboard.isDashboardExistingAndDisplayed();
+
+		HeaderPage header = new HeaderPage(driver);
+		header.clickAddNewIcon();
+		header.selectOptionFromAddNewDropdown(generalInformationData.getDropDownOption());
+
+		// Create a new IncidentReport
+		StepInfo.addMessage("Create IR");
+		AddIncidentReportPage addIncidentReportPage = new AddIncidentReportPage(driver);
+		addIncidentReportPage.newIncidentReportExistingAndDisplayed();
+		
+		addIncidentReportPage.selectIncidentType(generalInformationData.getIncidentType());
+		
+		
+		addIncidentReportPage.clickSave();
+		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
+				String.format("%s", "<b>IncidentReport created successfully</b>"), driver);
+
+		final String incidentReportNo = addIncidentReportPage.getIncidentReportNumber();
+		IncidentReportsPage incidentReport = new IncidentReportsPage(driver);
+		incidentReport.goD3vSOCWindow();
+		header.clickHamburgerMenu();
+		header.clickIncidentReportsMenu();
+		incidentReport.searchIR(incidentReportNo);
+		Verify.verifyTrue(incidentReport.isDisplayingIR(incidentReportNo),
+				String.format("%s", "<b>IncidentReport number is displayed in Grid</b>"), driver);
+
+		driver.manage().deleteAllCookies();
+
+	}
 }

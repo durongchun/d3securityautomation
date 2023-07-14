@@ -75,6 +75,31 @@ public class PhysicSystemLocator {
 	public static final By Assignee_OnIRCreateandEdit = By.id("ucIRGInfo_chkNotifyAssignee");
 	public static final By Assignee_OnIRClose = By.id("ucIRGInfo_cb_IR_notifyAssigneeClose");
 	public static final By Assignee_OnAssigneeReassign = By.id("ucIRGInfo_cbNotifyAssigneeReassign");
+	//----Incident Report---All Elements----	
+	public static final By CheckBox1 = By.id("DFC2_dcElement32378_0");
+	public static final By CheckBox2 = By.id("DFC2_dcElement32378_2");
+	public static final By CheckBox3 = By.id("DFC2_dcElement32378_1");
+	public static final By CheckBox4 = By.id("DFC2_dcElement32378_3");
+	public static final By DropdownMenu = By.id("DFC2_dcElement32380");
+	public static final By ListBoxOptions = By.cssSelector("#DFC2_ContainerdcElement32381 select option");
+	public static final String RadioBoxOption = "//label[contains(text(),'%s')]";
+	public static final By RevealCheckBoxOption1 = By.id("DFC2_dcElement32383_0");
+	public static final By RevealCheckBoxOption2 = By.id("DFC2_dcElement32383_1");
+	public static final By RevealCheckBox2Option1 = By.id("DFC2_dcElement32384_0");
+	public static final By RevealCheckBox2Option2 = By.id("DFC2_dcElement32384_1");
+	public static final By RevealCheckBox2Option3 = By.id("DFC2_dcElement32384_2");
+	public static final By RevealCheckBox2Option4 = By.id("DFC2_dcElement32384_4");
+	public static final By RevealCheckBox2Option5 = By.id("DFC2_dcElement32384_1");
+	public static final By RevealCheckBox2Option6 = By.id("DFC2_dcElement32384_5");
+	public static final By StateProvinceDropdown = By.id("DFC2_dcElement32386ddlCountry");
+	public static final By CountryDropdown = By.id("DFC2_dcElement32387");
+	public static final By TimeControlHour = By.id("DFC2_dcElement32389TimeControl_Picker1_HourList");
+	public static final By TimeControlMin = By.id("DFC2_dcElement32389TimeControl_Picker1_MinList");
+	public static final By TimeControlNoon = By.id("DFC2_dcElement32389TimeControl_Picker1_NoonList");
+	public static final By CanlendarTimeControl = By.cssSelector("#DFC2_dcElement32390DateTimeControl_Picker1_DatePanel img");
+	public static final By CanlendarTimeControlHour = By.id("DFC2_dcElement32390DateTimeControl_Picker1_HourList");
+	public static final By CanlendarTimeControlMin = By.id("DFC2_dcElement32390DateTimeControl_Picker1_MinList");
+	public static final By CanlendarControl = By.cssSelector("#DFC2_dcElement32391DateControl_Picker1_DatePanel img");
 	
 	
 	//----Case Management---	

@@ -167,6 +167,8 @@ public class IncidentReportTest extends BaseTest {
 		
 		
 		
+		
+		
 		addIncidentReportPage.clickSave();
 		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
 				String.format("%s", "<b>IncidentReport created successfully</b>"), driver);

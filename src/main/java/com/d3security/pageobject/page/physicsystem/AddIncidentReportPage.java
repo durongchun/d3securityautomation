@@ -97,6 +97,27 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.CheckBox3);
 
 	}
+	
+	public void selectRadioBox(String radio) {
+		clickElement(By.xpath(String.format(PhysicSystemLocator.RadioBoxOption, radio)));
+	}
+	
+	public void selectRevealCheckbox() {
+		clickElement(PhysicSystemLocator.RevealCheckBoxOption1);
+		clickElement(PhysicSystemLocator.RevealCheckBoxOption2);
+		clickElement(PhysicSystemLocator.RevealCheckBox2Option1);
+		clickElement(PhysicSystemLocator.RevealCheckBox2Option2);
+		clickElement(PhysicSystemLocator.RevealCheckBox2Option3);
+		clickElement(PhysicSystemLocator.RevealCheckBox2Option4);
+		clickElement(PhysicSystemLocator.RevealCheckBox2Option5);
+		clickElement(PhysicSystemLocator.RevealCheckBox2Option6);
+	}
+	
+	public void selectAddressDropdown(String city, String state, String country) {
+		selectDropdownByVisibleText(PhysicSystemLocator.StateProvinceDropdown, city);
+		selectDropdownByVisibleText(PhysicSystemLocator.StateDropdown, state);
+		selectDropdownByVisibleText(PhysicSystemLocator.CountryDropdown, country);
+	}
 
 	public void checkNotifyRecipientOnce() {
 		clickElement(PhysicSystemLocator.NotifyRecipientOnce);

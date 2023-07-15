@@ -93,6 +93,7 @@ public class PhysicSystemLocator {
 	public static final By RevealCheckBox2Option5 = By.id("DFC2_dcElement32384_1");
 	public static final By RevealCheckBox2Option6 = By.id("DFC2_dcElement32384_5");
 	public static final By StateProvinceDropdown = By.id("DFC2_dcElement32386ddlCountry");
+	public static final By StateDropdown = By.id("DFC2_dcElement32386ddlState");
 	public static final By CountryDropdown = By.id("DFC2_dcElement32387");
 	public static final By TimeControlHour = By.id("DFC2_dcElement32389TimeControl_Picker1_HourList");
 	public static final By TimeControlMin = By.id("DFC2_dcElement32389TimeControl_Picker1_MinList");

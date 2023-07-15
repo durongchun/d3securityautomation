@@ -51,6 +51,7 @@ public class PhysicSystemLocator {
 	public static final By SearchInput = By.id("txtKeywords"); 
 	public static final  String IRShowInGrid = "//td[contains(text(),'%s')]/.."; 
 	public static final By IframeForEntity = By.id("//iframe[contains(@src,'ConcurStatus')]");
+	public final String Section = "//span[contains(text(),'%s')]";
 	//----Incident Report---General Information----	
 	public static final By IncidentType = By.cssSelector("#DpIRTypeList .custom-select span");
 	public static final By IncidentTypeInput = By.cssSelector("#DpIRTypeList .custom-select div input");
@@ -81,7 +82,7 @@ public class PhysicSystemLocator {
 	public static final By CheckBox3 = By.id("DFC2_dcElement32378_1");
 	public static final By CheckBox4 = By.id("DFC2_dcElement32378_3");
 	public static final By DropdownMenu = By.id("DFC2_dcElement32380");
-	public static final By ListBoxOptions = By.cssSelector("#DFC2_ContainerdcElement32381 select option");
+	public static final By ListBoxOptions = By.cssSelector("#DFC2_ContainerdcElement32381 select");
 	public static final String RadioBoxOption = "//label[contains(text(),'%s')]";
 	public static final By RevealCheckBoxOption1 = By.id("DFC2_dcElement32383_0");
 	public static final By RevealCheckBoxOption2 = By.id("DFC2_dcElement32383_1");
@@ -100,6 +101,27 @@ public class PhysicSystemLocator {
 	public static final By CanlendarTimeControlHour = By.id("DFC2_dcElement32390DateTimeControl_Picker1_HourList");
 	public static final By CanlendarTimeControlMin = By.id("DFC2_dcElement32390DateTimeControl_Picker1_MinList");
 	public static final By CanlendarControl = By.cssSelector("#DFC2_dcElement32391DateControl_Picker1_DatePanel img");
+	public static final By CurrencyDropDown = By.id("DFC2_dcElement32392ddlCurrency");
+	public static final By CurrencyTextBox = By.id("DFC2_dcElement32392tbCurrency");
+	public static final By AutofillTextOptionIcon = By.id("DFC2_dcElement32395D3_DynamicForm_btnShowMatchesEATNIR_MAP_test_all_elementEAFNsearchabletextbox");
+	public static final By AutofillTextOption1 = By.id("dgShowMatches_ctl03_linkbuttonAutoFill");
+	public static final By AutofillTextDeleteIcon = By.id("DFC2_dcElement32395D3_DynamicForm_btnClearEATNIR_MAP_test_all_elementEAFNsearchabletextbox");
+	public static final By AutofillAreaTextDeleteIcon = By.cssSelector("[id*='DFC2_dcElement32396D3_DynamicForm_btnClearEATNIR_MAP']");
+	public static final By TextAreaInput = By.id("DFC2_dcElement32397");
+	public static final By CheckSpelling = By.name("DFC2$ctl155");
+	public static final By EmailTextBox = By.id("DFC2_dcElement32398");
+	public static final By EmailCountryDropDown = By.id("DFC2_dcElement32402ddl");
+	public static final By EmailTextBoxWithFormatInput = By.id("DFC2_dcElement32402tb"); 
+	public static final By NumericTextBox = By.id("DFC2_dcElement32403tb");
+	public static final By PhoneNumberTextBox = By.id("DFC2_dcElement32404");
+	public static final By PhoneNumberTextBoxWithFormat = By.id("DFC2_dcElement32405tb");
+	public static final By PhoneNumberDropDown = By.id("DFC2_dcElement32405ddl");
+	public static final By PostalCodeTextBox = By.id("DFC2_dcElement32406");
+	public static final By SearchableTextArea = By.id("DFC2_dcElement32407D3_DynamicForm_tbSearchableEATNIR_MAP_test_all_elementEAFN");
+	public static final By JSInstantText = By.id("DFC2_ContainerdcElement32409_tbTextBox_JavaScript");
+	public static final By JSReadOnly = By.id("DFC2_ContainerdcElement32410D3_DynamicForm_tbReadOnly_JavaScriptEATNIR_MAP_test_all_elementEAFN");
+	public static final By JSTextOnly = By.id("DFC2_ContainerdcElement32411_tbTextBox_JavaScript");
+	
 	
 	
 	//----Case Management---	

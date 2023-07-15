@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test2"
+<testsuite name="test3"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="53.512">
+           time="43.183">
   <properties />
   
   
-            <testcase name="testPhysicAddIR" time="53.512" classname="com.d3security.testcase.PhysicSystemTest" />
+            <testcase name="testPhysicAddCase" time="43.183" classname="com.d3security.testcase.PhysicSystemTest" />
       
 </testsuite>

@@ -156,8 +156,15 @@ public class BaseBrowser {
 		// Select an option by value
 		dropdown.selectByVisibleText(value);		
 		// dropdown.selectByIndex(2);
-		//dropdown.selectByValue();
-		
+		//dropdown.selectByValue();		
+	}
+	
+	public void selectDropdownAllOptions(By locator) {
+		// Locate the dropdown element
+		WebElement dropdownElement = driver.findElement(locator);
+		// Create a Select object
+		Select dropdown = new Select(dropdownElement);			
+		dropdown.getAllSelectedOptions();		
 		
 	}
 

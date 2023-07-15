@@ -7,6 +7,7 @@ import com.d3security.basepage.BaseBrowser;
 import com.d3security.basetest.BaseTest;
 import com.d3security.pageobject.data.PhysicAddCaseData;
 import com.d3security.pageobject.data.PhysicSystemData;
+import com.d3security.pageobject.data.incidentreport.IRAllElementsData;
 import com.d3security.pageobject.data.incidentreport.IRGeneralInformationData;
 import com.d3security.pageobject.locator.PhysicSystemLocator;
 import com.d3security.pageobject.page.LoginPage;
@@ -25,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class IncidentReportTest extends BaseTest {
 
-	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicIRData", description = "Physic IR GeneralInformation Test", priority = 1)
+	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicIRGeneralInformationData", description = "Physic IR GeneralInformation Test", priority = 1)
 	public void testPhysicGeneralInformation(Object[] dataObject) {
 		IRGeneralInformationData generalInformationData = new IRGeneralInformationData();
 		generalInformationData = (IRGeneralInformationData) dataObject[0];
@@ -112,16 +113,16 @@ public class IncidentReportTest extends BaseTest {
 
 	}
 	
-	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicIRData", description = "Physic IR GeneralInformation Test", priority = 1)
+	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicIRAllElementsData", description = "Physic IR All Elements Test", priority = 1)
 	public void testPhysicAllElements(Object[] dataObject) {
-		IRGeneralInformationData generalInformationData = new IRGeneralInformationData();
-		generalInformationData = (IRGeneralInformationData) dataObject[0];
+		IRAllElementsData allElementsData = new IRAllElementsData();
+		allElementsData = (IRAllElementsData) dataObject[0];
 
 		PhysicSystemLocator physicSystemLocator = new PhysicSystemLocator();
 		new SiteConfiguration(driver).enterPage(physicSystemLocator.url);
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.signInPhysic(generalInformationData.getUserName(), generalInformationData.getPassWord());
+		loginPage.signInPhysic(allElementsData.getUserName(), allElementsData.getPassWord());
 		// loginPage.LaunchVSOCManually();
 
 		DashboardPage dashboard = new DashboardPage(driver);
@@ -129,14 +130,41 @@ public class IncidentReportTest extends BaseTest {
 
 		HeaderPage header = new HeaderPage(driver);
 		header.clickAddNewIcon();
-		header.selectOptionFromAddNewDropdown(generalInformationData.getDropDownOption());
+		header.selectOptionFromAddNewDropdown(allElementsData.getDropDownOption());
 
 		// Create a new IncidentReport
 		StepInfo.addMessage("Create IR");
 		AddIncidentReportPage addIncidentReportPage = new AddIncidentReportPage(driver);
 		addIncidentReportPage.newIncidentReportExistingAndDisplayed();
 		
-		addIncidentReportPage.selectIncidentType(generalInformationData.getIncidentType());
+		addIncidentReportPage.selectIncidentType(allElementsData.getIncidentType());
+		
+		addIncidentReportPage.selectSection(physicSystemLocator.Section, allElementsData.getSection());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		addIncidentReportPage.clickSave();

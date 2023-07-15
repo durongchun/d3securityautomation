@@ -12,6 +12,7 @@ import com.d3security.constant.TestConstant;
 import com.d3security.pageobject.data.CyberSystemData;
 import com.d3security.pageobject.data.PhysicAddCaseData;
 import com.d3security.pageobject.data.PhysicSystemData;
+import com.d3security.pageobject.data.incidentreport.IRAllElementsData;
 import com.d3security.pageobject.data.incidentreport.IRGeneralInformationData;
 
 import lombok.extern.slf4j.Slf4j;
@@ -105,6 +106,21 @@ public class EasyExcelUtil {
             }
 			
 		})).sheet("test_IR_GeneralInformation").doRead();
+		return excelList;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public static List readPhysicIRAllElementsDataExcel() {		
+		List excelList = new ArrayList<>(); 
+		EasyExcel.read(TestConstant.IRPATH, IRAllElementsData.class, new PageReadListener<IRAllElementsData>(dataList -> {
+			for (IRAllElementsData data : dataList) {
+                log.info("read a record{}", JSON.toJSONString(data));
+                if (!data.getDescription().startsWith("//")) {
+                	excelList.add(data);
+				}                
+            }
+			
+		})).sheet("test_IR_AllElements").doRead();
 		return excelList;
 	}
 

@@ -81,6 +81,23 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.NoCheckboxForArrestDetails);
 	}
 
+	public void selectSection(String str1, String str2) {
+		waitForJQueryToLoad();
+		waitForPageToRefresh();
+		waitForSeconds(1);
+		clickElement(By.xpath(String.format(str1, str2)));
+		waitForSeconds(1);
+
+	}
+
+	public void selectCheckbox() {
+		clickElement(PhysicSystemLocator.CheckBox1);
+		clickElement(PhysicSystemLocator.CheckBox2);
+		clickElement(PhysicSystemLocator.CheckBox3);
+		clickElement(PhysicSystemLocator.CheckBox3);
+
+	}
+
 	public void checkNotifyRecipientOnce() {
 		clickElement(PhysicSystemLocator.NotifyRecipientOnce);
 	}
@@ -202,6 +219,17 @@ public class AddIncidentReportPage extends BasePage {
 		waitForSeconds(2);
 		switchFrame(PhysicSystemLocator.IncidentReportIframe);
 		selectDropdownByVisibleText(PhysicSystemLocator.WorkplaceViolenceOption, value);
+	}
+
+	public void selectDropdownMenu(String menu) {
+		StepInfo.addMessage("Choose " + menu);
+		waitForSeconds(2);
+		selectDropdownByVisibleText(PhysicSystemLocator.DropdownMenu, menu);
+
+	}
+	
+	public void selectListBoxAllOptions() {
+		selectDropdownAllOptions(PhysicSystemLocator.ListBoxOptions);
 	}
 
 	public boolean newIncidentReportExistingAndDisplayed() {

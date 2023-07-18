@@ -124,36 +124,88 @@ public class AddIncidentReportPage extends BasePage {
 		selectDropdownByVisibleText(PhysicSystemLocator.TimeControlMin, min);
 		selectDropdownByVisibleText(PhysicSystemLocator.TimeControlNoon, noon);
 	}
-	
-	public void selectCanlendarAndTimeControl(String canlendar, String hour, String min ) {		
+
+	public void selectCanlendarAndTimeControl(String canlendar, String hour, String min) {
 		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarTimeControl, canlendar);
 		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarTimeControlHour, hour);
 		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarTimeControlMin, min);
 	}
-	
+
 	public void selectCanlendarControl(String canlendar) {
 		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarControl, canlendar);
 	}
-	
-	public void selectCurrencyTextBox(String amount, String currency ) {
+
+	public void selectCurrencyTextBox(String amount, String currency) {
 		sendInput(PhysicSystemLocator.CurrencyTextBox, amount);
 		selectDropdownByVisibleText(PhysicSystemLocator.CurrencyDropDown, currency);
-		clickElement(PhysicSystemLocator.SumUpAmount);	
-		
+		clickElement(PhysicSystemLocator.SumUpAmount);
+
 	}
-	
-	public boolean isCaculatedTotalAmountDisplaying(String currency, String amount) {		
+
+	public boolean isCaculatedTotalAmountDisplaying(String currency, String amount) {
 		return isElementExists(driver, By.xpath(String.format(PhysicSystemLocator.CaculatedTotal, currency, amount)));
-		
+
 	}
-	
+
 	public void selectSearchableTextBox() {
 		clickElement(PhysicSystemLocator.AutofillTextOptionIcon);
 		clickElement(PhysicSystemLocator.AutofillTextOption1);
-		)
+
+	}
+
+	public boolean isAutofilledTextDisplayedTextBoxArea2() {
+		final String textbox = driver.findElement(PhysicSystemLocator.SearchableTextBox).getText();
+		final String textboxArea2 = driver.findElement(PhysicSystemLocator.SearchableTextBoxArea2).getText();
+		if (textbox.isEmpty() || textboxArea2.isEmpty()) {
+			return false;
+		} else {
+			return true;
+		}
+
+	}
+
+	public void inputTextArea(String text) {
+		sendInput(PhysicSystemLocator.TextAreaInput, text);
+	}
+
+	public void inputTextBox(String text) {
+		sendInput(PhysicSystemLocator.TextBox, text);
+	}
+
+	public boolean isTextAreaReadOnly() {
+		try {
+			elementClickable(PhysicSystemLocator.TextBoxReadOnly);
+			return false;
+		} catch (Exception e) {
+			return true;
+		}
+
 	}
 	
+	public void inputEmailTextBox(String email, String emailformat) {
+		sendInput(PhysicSystemLocator.EmailTextBox, email);
+		sendInput(PhysicSystemLocator.EmailTextBoxWithFormatInput, emailformat);
+	}
 	
+	public void inputNumericTextBox(String numeric, String phoneNumber, String phoneFormat) {
+		sendInput(PhysicSystemLocator.NumericTextBox, numeric);
+		sendInput(PhysicSystemLocator.PhoneNumberTextBox, phoneNumber);
+		sendInput(PhysicSystemLocator.PhoneNumberTextBoxWithFormat, phoneFormat);		)
+	}
+	
+	public void inputPostCode(String code) {
+		sendInput(PhysicSystemLocator.PostalCodeTextBox, code);		
+	}
+	
+	public void inputSearchableTextArea(String text) {
+		sendInput(PhysicSystemLocator.SearchableTextArea, text);		
+	}
+	
+	public void inputJSArea(String instantText, String readOnly, String textBox ) {
+		sendInput(PhysicSystemLocator.JSInstantText, instantText);	
+		sendInput(PhysicSystemLocator.JSReadOnly, readOnly);	
+		sendInput(PhysicSystemLocator.JSTextBox, textBox);	)
+	}
 
 	public void checkNotifyRecipientOnce() {
 		clickElement(PhysicSystemLocator.NotifyRecipientOnce);

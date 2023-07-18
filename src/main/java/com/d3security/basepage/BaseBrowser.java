@@ -99,6 +99,15 @@ public class BaseBrowser {
 	public WebElement locateElement(By locator) {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	}
+	/**
+	 * Get WebElement element object through element clickable
+	 *
+	 * @param locator By
+	 * @return located element
+	 */
+	public WebElement elementClickable(By locator) {
+		return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
 
 	/**
 	 * Click element

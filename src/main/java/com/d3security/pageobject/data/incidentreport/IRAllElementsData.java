@@ -37,7 +37,16 @@ public class IRAllElementsData {
 	private String searchableTextBoxArea;
 	private String textArea;
 	private String textBox;
-	private String textAreaReadOnly;
+	private String emailTextBox;
+	private String emailTextBoxWithFormat;
+	private String numericTextbox;
+	private String phoneNumberTextbox;
+	private String phoneNumberTextboxwitFormat;
+	private String postCode;
+	private String searchableTextArea;
+	private String jsInstantText;
+	private String jsReadOnly;
+	private String jsTextBox;
 
 
 	

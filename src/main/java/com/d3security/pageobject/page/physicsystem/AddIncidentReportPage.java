@@ -94,7 +94,7 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.CheckBox1);
 		clickElement(PhysicSystemLocator.CheckBox2);
 		clickElement(PhysicSystemLocator.CheckBox3);
-		clickElement(PhysicSystemLocator.CheckBox3);
+		clickElement(PhysicSystemLocator.CheckBox4);
 
 	}
 
@@ -137,12 +137,12 @@ public class AddIncidentReportPage extends BasePage {
 
 	public void selectCurrencyTextBox(String amount, String currency) {
 		sendInput(PhysicSystemLocator.CurrencyTextBox, amount);
-		selectDropdownByVisibleText(PhysicSystemLocator.CurrencyDropDown, currency);
-		clickElement(PhysicSystemLocator.SumUpAmount);
+		selectDropdownByVisibleText(PhysicSystemLocator.CurrencyDropDown, currency);		
 
 	}
 
 	public boolean isCaculatedTotalAmountDisplaying(String currency, String amount) {
+		clickElement(PhysicSystemLocator.SumUpAmount);
 		return isElementExists(driver, By.xpath(String.format(PhysicSystemLocator.CaculatedTotal, currency, amount)));
 
 	}
@@ -190,7 +190,7 @@ public class AddIncidentReportPage extends BasePage {
 	public void inputNumericTextBox(String numeric, String phoneNumber, String phoneFormat) {
 		sendInput(PhysicSystemLocator.NumericTextBox, numeric);
 		sendInput(PhysicSystemLocator.PhoneNumberTextBox, phoneNumber);
-		sendInput(PhysicSystemLocator.PhoneNumberTextBoxWithFormat, phoneFormat);		)
+		sendInput(PhysicSystemLocator.PhoneNumberTextBoxWithFormat, phoneFormat);
 	}
 	
 	public void inputPostCode(String code) {
@@ -204,7 +204,7 @@ public class AddIncidentReportPage extends BasePage {
 	public void inputJSArea(String instantText, String readOnly, String textBox ) {
 		sendInput(PhysicSystemLocator.JSInstantText, instantText);	
 		sendInput(PhysicSystemLocator.JSReadOnly, readOnly);	
-		sendInput(PhysicSystemLocator.JSTextBox, textBox);	)
+		sendInput(PhysicSystemLocator.JSTextBox, textBox);
 	}
 
 	public void checkNotifyRecipientOnce() {

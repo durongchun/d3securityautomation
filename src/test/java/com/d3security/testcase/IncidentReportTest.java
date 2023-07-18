@@ -49,53 +49,55 @@ public class IncidentReportTest extends BaseTest {
 		StepInfo.addMessage("Create IR");
 		AddIncidentReportPage addIncidentReportPage = new AddIncidentReportPage(driver);
 		addIncidentReportPage.newIncidentReportExistingAndDisplayed();
-		
+
 		addIncidentReportPage.selectIncidentType(generalInformationData.getIncidentType());
 		addIncidentReportPage.inputTitle(generalInformationData.getTitle());
-		addIncidentReportPage.addCCRecipients(generalInformationData.getCcUsers(), generalInformationData.getCcGroups());
-		
+		addIncidentReportPage.addCCRecipients(generalInformationData.getCcUsers(),
+				generalInformationData.getCcGroups());
+
 		if (generalInformationData.getNotifyRecipientOnce().toLowerCase().equals("true")) {
 			addIncidentReportPage.goIncidentReportWindow();
 			addIncidentReportPage.checkNotifyRecipientOnce();
 		}
-		
-		addIncidentReportPage.selectOccurredOn(generalInformationData.getIncidentOccurredOn());		
+
+		addIncidentReportPage.selectOccurredOn(generalInformationData.getIncidentOccurredOn());
 		addIncidentReportPage.selectEndedOn(generalInformationData.getIncidentEndedOn());
-		
-		addIncidentReportPage.inputOneTimeEmailNotifyOnSave(generalInformationData.getSendOneTimeEmailNotificationOnSave());
-		
+
+		addIncidentReportPage
+				.inputOneTimeEmailNotifyOnSave(generalInformationData.getSendOneTimeEmailNotificationOnSave());
+
 		if (generalInformationData.getEmailNotificationAssignmentRules().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkEmailNotifyAssignRules();
-		}		
-		
+		}
+
 		if (generalInformationData.getNotifyCCRecipientsOnCreateEditandClose().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyCCRecipients();
 		}
-		
+
 		if (generalInformationData.getCreator_onIRCreateandEdit().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyCreatorOnIRCreateandEdit();
 		}
-		
+
 		if (generalInformationData.getCreator_onIRClose().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyCreatorOnIRClose();
 		}
-		
+
 		if (generalInformationData.getCreator_onAssigneeReassign().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyCreatorOnAssigneeReassign();
 		}
-		
+
 		if (generalInformationData.getAssignee_onIRCreateandEdit().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyAssigneeOnIRCreateandEdit();
 		}
-		
+
 		if (generalInformationData.getAssignee_onIRClose().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyAssigneeOnIRClose();
 		}
-		
+
 		if (generalInformationData.getAssignee_onAssigneeReassign().toLowerCase().equals("true")) {
 			addIncidentReportPage.checkNotifyAssigneeOnReassign();
 		}
-		
+
 		addIncidentReportPage.clickSave();
 		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
 				String.format("%s", "<b>IncidentReport created successfully</b>"), driver);
@@ -112,7 +114,7 @@ public class IncidentReportTest extends BaseTest {
 		driver.manage().deleteAllCookies();
 
 	}
-	
+
 	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicIRAllElementsData", description = "Physic IR All Elements Test", priority = 1)
 	public void testPhysicAllElements(Object[] dataObject) {
 		IRAllElementsData allElementsData = new IRAllElementsData();
@@ -136,39 +138,64 @@ public class IncidentReportTest extends BaseTest {
 		StepInfo.addMessage("Create IR");
 		AddIncidentReportPage addIncidentReportPage = new AddIncidentReportPage(driver);
 		addIncidentReportPage.newIncidentReportExistingAndDisplayed();
-		
+
 		addIncidentReportPage.selectIncidentType(allElementsData.getIncidentType());
-		
+
 		addIncidentReportPage.selectSection(physicSystemLocator.Section, allElementsData.getSection());
+
+		if (allElementsData.getCheckBox().toLowerCase().equals("true")) {
+			addIncidentReportPage.selectCheckbox();
+		}
+
+		addIncidentReportPage.selectDropdownMenu(allElementsData.getDropdownMenu());
+
+		if (allElementsData.getListBox().toLowerCase().equals("true")) {
+			addIncidentReportPage.selectListBoxAllOptions();
+		}
+
+		addIncidentReportPage.selectRadioBox(allElementsData.getRadioBox());
+
+		if (allElementsData.getRevealCheckBox1_1().toLowerCase().equals("true")
+				&& allElementsData.getRevealCheckBox1_2().toLowerCase().equals("true")) {
+			addIncidentReportPage.selectRevealCheckbox();
+		}
+
+		addIncidentReportPage.selectRadioBox(allElementsData.getRadioBoxLevel());
+
+		addIncidentReportPage.selectAddressDropdown(allElementsData.getStateDropDown(),
+				allElementsData.getProvinceDropdown(), allElementsData.getCountryDropdown());
+
+		addIncidentReportPage.selectTimeControl(allElementsData.getTimeControlHour(),
+				allElementsData.getTimeControlMin(), allElementsData.getNoonPicker());
+
+		addIncidentReportPage.selectCanlendarAndTimeControl(allElementsData.getCalendarControl(),
+				allElementsData.getTimeControlHour(), allElementsData.getTimeControlMin());
+
+		addIncidentReportPage.selectCanlendarControl(allElementsData.getCalendarControl());
+
+		addIncidentReportPage.selectCurrencyTextBox(allElementsData.getCurrencyTextBox(),
+				allElementsData.getCurrencyDropdown());
+
+		if (allElementsData.getSumUpAmount().toLowerCase().equals("true")) {
+			Verify.verifyTrue(
+					addIncidentReportPage.isCaculatedTotalAmountDisplaying(allElementsData.getCurrencyDropdown(),
+							allElementsData.getCurrencyTextBox()),
+					"Calculated Total Amount is displayed as  " + allElementsData.getCurrencyTextBox(), driver);
+
+		}
+
+		if (allElementsData.getSearchableTextBox().toLowerCase().equals("true")
+				&& allElementsData.getSearchableTextArea().toLowerCase().equals("true")) {
+			addIncidentReportPage.selectSearchableTextBox();
+			Verify.verifyTrue(addIncidentReportPage.isAutofilledTextDisplayedTextBoxArea2(),
+					"Searchable TextBox and area are auto-filled", driver);
+		}
+		
+		addIncidentReportPage.inputTextArea(allElementsData.getTextArea());
+		addIncidentReportPage.inputTextBox(allElementsData.getTextBox());
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		addIncidentReportPage.clickSave();
 		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),
 				String.format("%s", "<b>IncidentReport created successfully</b>"), driver);

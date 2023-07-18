@@ -25,9 +25,23 @@ public class HeaderPage extends BasePage {
 	}
 
 	public void clickIncidentReportsMenu() {
-		StepInfo.addMessage("Click IncidentReports Menu");
+		if (isElementExists(driver, PhysicSystemLocator.IncidentReportsMenu)) {
+			StepInfo.addMessage("Click IncidentReports Menu");
+			waitForSeconds(1);
+			clickElementWithJavaScript(driver, driver.findElement(PhysicSystemLocator.IncidentReportsMenu));
+		}else {
+			clickMoreMenu();
+			clickElementWithJavaScript(driver, driver.findElement(PhysicSystemLocator.IncidentReportsMenu));
+		}
+		
+	}
+	
+	public void clickMoreMenu() {
+		StepInfo.addMessage("Click More Menu");
+		waitForSeconds(1);		
+		mouseOverToElement(driver.findElement(PhysicSystemLocator.MoreMenu));
 		waitForSeconds(1);
-		clickElementWithJavaScript(driver, driver.findElement(PhysicSystemLocator.IncidentReportsMenu));
+		
 	}
 
 	public void clickAddNewIcon() {

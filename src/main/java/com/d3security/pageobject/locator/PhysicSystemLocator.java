@@ -27,6 +27,7 @@ public class PhysicSystemLocator {
 	//----Header---	
 	public static final By HamburgerMenu = By.xpath("//a[@id='hamburger']"); 
 	public static final By IncidentReportsMenu = By.xpath("//a[contains(text(),'Incident Reports')]");	
+	public static final By MoreMenu = By.xpath("//span[contains(text(), 'More')]");
 	
 	public static final By CreateIcon = By.id("createIcon"); 
 	public static final By AddNewMenu = By.xpath("//span[@id='lbDashboardTitle']/../../..//*[@id='newMenuDiv']");

@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="70.502">
+           time="71.505">
   <properties />
   
   
-            <testcase name="testPhysicGeneralInformation" time="70.502" classname="com.d3security.testcase.IncidentReportTest" />
+            <testcase name="testPhysicGeneralInformation" time="71.505" classname="com.d3security.testcase.IncidentReportTest" />
       
 </testsuite>

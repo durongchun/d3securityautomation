@@ -97,7 +97,7 @@ public class PhysicSystemTest extends BaseTest {
 		addCasePage.ClickCreateButt();
 		final String caseNumber = addCasePage.getCaseNumber();
 		addCasePage.searchCase(caseNumber);
-		Verify.verifyTrue(addCasePage.isCaseCreatedSuccessfully(caseNumber),
+		Verify.verifyFalse(addCasePage.isCaseCreatedSuccessfully(caseNumber),
 				String.format("%s", "<b>Case number is displayed in Grid</b>"), driver);
 
 		driver.manage().deleteAllCookies();

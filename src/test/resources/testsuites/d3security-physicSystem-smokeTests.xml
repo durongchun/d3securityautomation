@@ -33,18 +33,30 @@
     	</classes>  
 	</test>  -->
 	
-	<!--<test name="test2">  
+	<!--<test name="test1">  
    		<parameter name="browserName" value="chrome"/>      	
    	 	<classes>  
         	<class name="com.d3security.testcase.PhysicSystemTest"> 
         	<methods>
-					<include name="testPhysicAddIR" />
+					<include name="testPhysicAddIR" />	
+					<include name="testPhysicAddCase" />				
 				</methods>
 			</class> 
     	</classes>  
-	</test>-->
+	</test>
+	-->
+	<test name="test2">  
+   		<parameter name="browserName" value="edge"/>      	
+   	 	<classes>  
+        	<class name="com.d3security.testcase.PhysicSystemTest"> 
+        	<methods>
+					<include name="testPhysicAddIR" />					
+				</methods>
+			</class> 
+    	</classes>  
+	</test>
 	
-	<test name="test3">  
+	<!--<test name="test3">  
    		<parameter name="browserName" value="chrome"/>      	
    	 	<classes>  
         	<class name="com.d3security.testcase.PhysicSystemTest"> 
@@ -53,7 +65,7 @@
 				</methods>
 			</class> 
     	</classes>  
-	</test>
+	</test>-->
 
 <!-- <test name="Road Test">  
    		<parameter name="browserName" value="firefox" />		

@@ -97,11 +97,11 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.CheckBox3);
 
 	}
-	
+
 	public void selectRadioBox(String radio) {
 		clickElement(By.xpath(String.format(PhysicSystemLocator.RadioBoxOption, radio)));
 	}
-	
+
 	public void selectRevealCheckbox() {
 		clickElement(PhysicSystemLocator.RevealCheckBoxOption1);
 		clickElement(PhysicSystemLocator.RevealCheckBoxOption2);
@@ -112,11 +112,22 @@ public class AddIncidentReportPage extends BasePage {
 		clickElement(PhysicSystemLocator.RevealCheckBox2Option5);
 		clickElement(PhysicSystemLocator.RevealCheckBox2Option6);
 	}
-	
+
 	public void selectAddressDropdown(String city, String state, String country) {
 		selectDropdownByVisibleText(PhysicSystemLocator.StateProvinceDropdown, city);
 		selectDropdownByVisibleText(PhysicSystemLocator.StateDropdown, state);
 		selectDropdownByVisibleText(PhysicSystemLocator.CountryDropdown, country);
+	}
+
+	public void selectTimeControl(String hour, String min, String noon) {
+		selectDropdownByVisibleText(PhysicSystemLocator.TimeControlHour, hour);
+		selectDropdownByVisibleText(PhysicSystemLocator.TimeControlMin, min);
+		selectDropdownByVisibleText(PhysicSystemLocator.TimeControlNoon, noon);
+	}
+
+	public void selectCalendarAndDateControl(String Canlendar) {
+		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarControl, Canlendar);
+		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarControl, Canlendar);
 	}
 
 	public void checkNotifyRecipientOnce() {
@@ -248,7 +259,7 @@ public class AddIncidentReportPage extends BasePage {
 		selectDropdownByVisibleText(PhysicSystemLocator.DropdownMenu, menu);
 
 	}
-	
+
 	public void selectListBoxAllOptions() {
 		selectDropdownAllOptions(PhysicSystemLocator.ListBoxOptions);
 	}

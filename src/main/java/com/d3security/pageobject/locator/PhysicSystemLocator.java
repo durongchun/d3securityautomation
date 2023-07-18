@@ -103,9 +103,13 @@ public class PhysicSystemLocator {
 	public static final By CanlendarTimeControlMin = By.id("DFC2_dcElement32390DateTimeControl_Picker1_MinList");
 	public static final By CanlendarControl = By.cssSelector("#DFC2_dcElement32391DateControl_Picker1_DatePanel img");
 	public static final By CurrencyDropDown = By.id("DFC2_dcElement32392ddlCurrency");
+	public static final By SumUpAmount = By.id("DFC2_dcElement32392chkCurrency");
+	public static final String CaculatedTotal = "//span[contains(text(), '%s %s.00 ')]";
 	public static final By CurrencyTextBox = By.id("DFC2_dcElement32392tbCurrency");
 	public static final By AutofillTextOptionIcon = By.id("DFC2_dcElement32395D3_DynamicForm_btnShowMatchesEATNIR_MAP_test_all_elementEAFNsearchabletextbox");
 	public static final By AutofillTextOption1 = By.id("dgShowMatches_ctl03_linkbuttonAutoFill");
+	public static final String AutofillTextOption1Area2 = "//div[contains(text(),'%s')]";
+	public static final By autofillTextArea2 = By.xpath("//textarea[@id='DFC2_dcElement32396D3_DynamicForm_tbSearchableEATNIR_MAP_test_all_elementEAFNsearchabletextbox(area)2']");
 	public static final By AutofillTextDeleteIcon = By.id("DFC2_dcElement32395D3_DynamicForm_btnClearEATNIR_MAP_test_all_elementEAFNsearchabletextbox");
 	public static final By AutofillAreaTextDeleteIcon = By.cssSelector("[id*='DFC2_dcElement32396D3_DynamicForm_btnClearEATNIR_MAP']");
 	public static final By TextAreaInput = By.id("DFC2_dcElement32397");

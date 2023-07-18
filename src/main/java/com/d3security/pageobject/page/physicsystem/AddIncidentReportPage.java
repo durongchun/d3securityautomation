@@ -124,14 +124,36 @@ public class AddIncidentReportPage extends BasePage {
 		selectDropdownByVisibleText(PhysicSystemLocator.TimeControlMin, min);
 		selectDropdownByVisibleText(PhysicSystemLocator.TimeControlNoon, noon);
 	}
-
 	
-	
-	
-	public void selectCalendarAndTimeControl(String Canlendar) {
-		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarControl, Canlendar);
-		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarControl, Canlendar);
+	public void selectCanlendarAndTimeControl(String canlendar, String hour, String min ) {		
+		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarTimeControl, canlendar);
+		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarTimeControlHour, hour);
+		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarTimeControlMin, min);
 	}
+	
+	public void selectCanlendarControl(String canlendar) {
+		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarControl, canlendar);
+	}
+	
+	public void selectCurrencyTextBox(String amount, String currency ) {
+		sendInput(PhysicSystemLocator.CurrencyTextBox, amount);
+		selectDropdownByVisibleText(PhysicSystemLocator.CurrencyDropDown, currency);
+		clickElement(PhysicSystemLocator.SumUpAmount);	
+		
+	}
+	
+	public boolean isCaculatedTotalAmountDisplaying(String currency, String amount) {		
+		return isElementExists(driver, By.xpath(String.format(PhysicSystemLocator.CaculatedTotal, currency, amount)));
+		
+	}
+	
+	public void selectSearchableTextBox() {
+		clickElement(PhysicSystemLocator.AutofillTextOptionIcon);
+		clickElement(PhysicSystemLocator.AutofillTextOption1);
+		)
+	}
+	
+	
 
 	public void checkNotifyRecipientOnce() {
 		clickElement(PhysicSystemLocator.NotifyRecipientOnce);

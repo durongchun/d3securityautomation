@@ -56,7 +56,7 @@
     	</classes>  
 	</test>
 	
-	<!--<test name="test3">  
+	<test name="test3">  
    		<parameter name="browserName" value="chrome"/>      	
    	 	<classes>  
         	<class name="com.d3security.testcase.PhysicSystemTest"> 
@@ -65,7 +65,7 @@
 				</methods>
 			</class> 
     	</classes>  
-	</test>-->
+	</test>
 
 <!-- <test name="Road Test">  
    		<parameter name="browserName" value="firefox" />		

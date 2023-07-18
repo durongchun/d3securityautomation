@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class PhysicSystemTest extends BaseTest {
 
-	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicData", description = "Physic Login", priority = 1)
+	@Test(dataProviderClass = ExcelDataProvider.class, dataProvider = "PhysicData", description = "Physic Add IR", priority = 1)
 	public void testPhysicAddIR(Object[] dataObject) {
 		PhysicSystemData physicSystemData = new PhysicSystemData();
 		physicSystemData = (PhysicSystemData) dataObject[0];

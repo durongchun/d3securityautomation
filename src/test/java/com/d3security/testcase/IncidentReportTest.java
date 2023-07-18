@@ -195,6 +195,8 @@ public class IncidentReportTest extends BaseTest {
 		addIncidentReportPage.inputTextBox(allElementsData.getTextBox());
 		
 		
+		
+		
 
 		addIncidentReportPage.clickSave();
 		Verify.verifyTrue(addIncidentReportPage.isIncidentReportCreatedSuccessfully(),

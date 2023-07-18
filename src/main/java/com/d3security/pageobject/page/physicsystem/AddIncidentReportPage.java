@@ -125,7 +125,10 @@ public class AddIncidentReportPage extends BasePage {
 		selectDropdownByVisibleText(PhysicSystemLocator.TimeControlNoon, noon);
 	}
 
-	public void selectCalendarAndDateControl(String Canlendar) {
+	
+	
+	
+	public void selectCalendarAndTimeControl(String Canlendar) {
 		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarControl, Canlendar);
 		selectDropdownByVisibleText(PhysicSystemLocator.CanlendarControl, Canlendar);
 	}

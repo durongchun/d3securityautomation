@@ -28,6 +28,7 @@ public class PhysicSystemLocator {
 	public static final By HamburgerMenu = By.xpath("//a[@id='hamburger']"); 
 	public static final By IncidentReportsMenu = By.xpath("//a[contains(text(),'Incident Reports')]");	
 	public static final By MoreMenu = By.xpath("//span[contains(text(), 'More')]");
+	public static final By Dispatch = By.xpath("//a[contains(text(),'Dispatch Operations Center')]");
 	
 	public static final By CreateIcon = By.id("createIcon"); 
 	public static final By AddNewMenu = By.xpath("//span[@id='lbDashboardTitle']/../../..//*[@id='newMenuDiv']");
@@ -141,6 +142,15 @@ public class PhysicSystemLocator {
 	public static final By CaseSearchBox = By.cssSelector(".searchbox-text");
 	public static final By OkButtOnAlert = By.cssSelector(".k-button");
 	public static final By Preview = By.xpath("//div[contains(text(),'Preview')]");
+	
+	
+	//----Dispatch----------
+	public static final By DispatchID = By.xpath("//*[contains(text(), '%s')]");
+	public static final By OfficeID = By.xpath("//td[contains(text(),'%s')]");	
+	public static final By Assign = By.id("assign");
+
+	
+	
 	
 	
 	

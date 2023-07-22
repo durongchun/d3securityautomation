@@ -5,20 +5,20 @@
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test thread-count="3" parallel="tests" name="test2(failed)">
+  <test thread-count="3" parallel="tests" name="test1(failed)">
     <parameter name="browserName" value="chrome"/>
     <classes>
-      <class name="com.d3security.testcase.IncidentReportTest">
+      <class name="com.d3security.testcase.DispatchTest">
         <methods>
           <include name="beforeTest"/>
+          <include name="testPhysicDispatchClearOfficer" invocation-numbers="0"/>
           <include name="afterTest"/>
           <include name="beforeSuite"/>
           <include name="afterClass"/>
-          <include name="testPhysicGeneralInformation" invocation-numbers="0"/>
           <include name="beforeClass"/>
           <include name="afterSuite"/>
         </methods>
-      </class> <!-- com.d3security.testcase.IncidentReportTest -->
+      </class> <!-- com.d3security.testcase.DispatchTest -->
     </classes>
-  </test> <!-- test2(failed) -->
+  </test> <!-- test1(failed) -->
 </suite> <!-- Failed suite [Physic System - IncidentReport Test] -->

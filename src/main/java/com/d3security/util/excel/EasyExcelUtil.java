@@ -12,6 +12,7 @@ import com.d3security.constant.TestConstant;
 import com.d3security.pageobject.data.CyberSystemData;
 import com.d3security.pageobject.data.PhysicAddCaseData;
 import com.d3security.pageobject.data.PhysicSystemData;
+import com.d3security.pageobject.data.dispatch.DispatchOfficerClearData;
 import com.d3security.pageobject.data.incidentreport.IRAllElementsData;
 import com.d3security.pageobject.data.incidentreport.IRGeneralInformationData;
 
@@ -121,6 +122,21 @@ public class EasyExcelUtil {
             }
 			
 		})).sheet("test_IR_AllElements").doRead();
+		return excelList;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public static List readPhysicDispatchOfficeClearDataExcel() {		
+		List excelList = new ArrayList<>(); 
+		EasyExcel.read(TestConstant.DISPATCHPATH, DispatchOfficerClearData.class, new PageReadListener<DispatchOfficerClearData>(dataList -> {
+			for (DispatchOfficerClearData data : dataList) {
+                log.info("read a record{}", JSON.toJSONString(data));
+                if (!data.getDescription().startsWith("//")) {
+                	excelList.add(data);
+				}                
+            }
+			
+		})).sheet("test_DispatchOfficerClear").doRead();
 		return excelList;
 	}
 

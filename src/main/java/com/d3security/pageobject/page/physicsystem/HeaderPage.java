@@ -50,6 +50,13 @@ public class HeaderPage extends BasePage {
 		mouseOverToElement(driver.findElement(PhysicSystemLocator.CreateIcon));
 		waitForSeconds(1);
 	}
+	
+	public void goDispatch() {
+		this.clickElement(PhysicSystemLocator.DispatchMenu);
+		this.moveToElement(PhysicSystemLocator.DispatchCenter);
+		clickElement(PhysicSystemLocator.DispatchCenter);	
+	}
+	
 
 	public void selectOptionFromAddNewDropdown(String str) {
 		StepInfo.addMessage("Select dropdown " + str);

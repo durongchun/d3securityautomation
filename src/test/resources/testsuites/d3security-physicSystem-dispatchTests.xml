@@ -1,0 +1,70 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Physic System - Dispatch Test" verbose="1" parallel="tests" thread-count="3" configfailurepolicy="continue">
+<listeners>  	
+  <!-- <listener class-name="com.d3security.listener.CustomTestListener"/>  -->
+   <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+   <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+ </listeners>  	
+<!-- 	<test name="test1">
+		<parameter name="browserName" value="firefox" />		
+		<parameter name="nodeIp" value="http://192.168.1.80:5555"/> 
+		
+		<classes>
+			<class
+				name="com.holinova.testcase.PhysicSystemTest">
+				<methods>
+					<include name="testPhysicFlow" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<!-- <test name="test2">  
+   		 <parameter name="browserName" value="chrome"/>  
+   		 <parameter name="remoteIP" value="192.168.1.64"/>
+   		 <parameter name="remotePort" value="4444"/>    	
+   	 	<classes>  
+        	<class name="com.holinova.testcase.PhysicSystemTest"> 
+        	<methods>
+					<include name="testPhysicFlow" />
+				</methods>
+			</class> 
+    	</classes>  
+	</test>  -->
+	
+	<test name="test1">  
+   		<parameter name="browserName" value="chrome"/>      	
+   	 	<classes>  
+        	<class name="com.d3security.testcase.DispatchTest"> 
+        	<methods>
+					<include name="testPhysicDispatchClearOfficer" />
+				</methods>
+			</class> 
+    	</classes>  
+	</test>
+	
+	<!--<test name="test3">  
+   		<parameter name="browserName" value="chrome"/>      	
+   	 	<classes>  
+        	<class name="com.d3security.testcase.PhysicSystemTest"> 
+        	<methods>
+					<include name="testPhysicAddCase" />					
+				</methods>
+			</class> 
+    	</classes>  
+	</test>-->
+
+<!-- <test name="Road Test">  
+   		<parameter name="browserName" value="firefox" />		
+		<parameter name="nodeIp" value="http://192.168.1.80:5555"/>     	
+   	 	<classes>  
+        	<class name="com.holinova.testcase.TestRoadLangley"> 
+        	<methods>
+					<include name="testRoadRegister" />
+			</methods>
+			</class> 
+    	</classes>  
+	</test> -->
+	 
+</suite>

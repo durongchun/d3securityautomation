@@ -11,6 +11,7 @@ import lombok.Setter;
 public class PhysicSystemLocator {
 	//-----Site----
 	public final String url = "https://v2019.d3securityonline.net/V127Physical/VSOC/";
+	public final String disneyurl = "https://v2019.d3securityonline.net/V127Disney/VSOC";
 	
 	//-----Login Page----
 	public static final By UserName = By.id("username");
@@ -28,7 +29,9 @@ public class PhysicSystemLocator {
 	public static final By HamburgerMenu = By.xpath("//a[@id='hamburger']"); 
 	public static final By IncidentReportsMenu = By.xpath("//a[contains(text(),'Incident Reports')]");	
 	public static final By MoreMenu = By.xpath("//span[contains(text(), 'More')]");
-	public static final By Dispatch = By.xpath("//a[contains(text(),'Dispatch Operations Center')]");
+	public static final By DispatchMenu = By.xpath("//li[8]/span[contains(text(), 'Dispatches')]");
+	public static final By DispatchCenter = By.xpath("//a[contains(text(),'Dispatch Operations Center')]");
+	
 	
 	public static final By CreateIcon = By.id("createIcon"); 
 	public static final By AddNewMenu = By.xpath("//span[@id='lbDashboardTitle']/../../..//*[@id='newMenuDiv']");
@@ -145,9 +148,34 @@ public class PhysicSystemLocator {
 	
 	
 	//----Dispatch----------
-	public static final By DispatchID = By.xpath("//*[contains(text(), '%s')]");
-	public static final By OfficeID = By.xpath("//td[contains(text(),'%s')]");	
-	public static final By Assign = By.id("assign");
+	public static final String DispatchID = "//*[contains(text(), '%s')]";
+	public static final String OfficerID = "//td[contains(text(),'%s')]";	
+	public static final By AssignButt = By.id("assign");
+	public static final By OfficersButt = By.id("officer_enterfullscreen");
+	public static final String OfficerInQ4 = "//tr[1]//td[2][contains(text(),'%s')]";
+	public static final By DispatchesButt = By.id("dsp_enterfullscreen");
+	public static final By DispatchSearchBox = By.id("searchboxText-id");	
+	public static final By DispatchCheckBox1 = By.id("DFC2_dcElement12872_0");
+	public static final By DispatchCheckBox2 = By.id("DFC2_dcElement12872_2");
+	public static final By DispatchCheckBox3 = By.id("DFC2_dcElement12872_1");
+	public static final By DispatchCheckBox4 = By.id("DFC2_dcElement12872_3");
+	public static final By DispatchSearchableTextBox = By.id("DFC2_dcElement12893D3_DynamicForm_tbSearchableEATNNoneEAFN");
+	public static final By DispatchTextArea = By.id("Dispatch");
+	public static final By DispatchType = By.xpath("//span[1]/span[1]/span[1]");
+	public static final By DispatchTypeInput = By.xpath("//body[1]/div[35]/div[1]/span[1]/input[1]");
+	public static final By DispatchEnroute = By.id("Enroute");
+	public static final By DispatchOnHold = By.id("OnHold");
+	public static final By DispatchOnScene = By.id("OnScene");
+	public static final By DispatchClear = By.id("Clear");
+	public static final By NewDispatchButt = By.id("new-dsp");
+	public static final String DispatchSection = "//div[contains(text(), '%s')]";
+	public static final String DispatchNumber = "//span[contains(text(),' - %s')]";
+	
+	
+	
+	
+	
+	
 
 	
 	

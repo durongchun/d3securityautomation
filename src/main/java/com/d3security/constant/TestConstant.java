@@ -25,6 +25,7 @@ public class TestConstant {
      */
     public static final String FILEPATH = resourceDirectory() + "\\testData\\demo.xlsx" ;
     public static final String IRPATH = resourceDirectory() + "\\testData\\IR.xlsx" ;
+    public static final String DISPATCHPATH = resourceDirectory() + "\\testData\\Dispatch.xlsx" ;
     
     /**
      * get resource directory 
